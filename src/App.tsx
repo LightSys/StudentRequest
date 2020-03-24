@@ -42,15 +42,9 @@ const App: React.FC = () => {
               return <Page {...props} />;
             }} exact={true} />
             <Route path="/" render={() => <Redirect to="/page/Inbox" />} exact={true} />
-<<<<<<< HEAD
-            <Route path="/offcampus" render={(props) => {
-              setSelectedPage(props.match.params.name);
-              return <OffCampus {...props} />;
-=======
             <Route path="/DatingForm" render={(props) => {
               setSelectedPage(props.match.params.name);
               return <DatingForm {...props} />;
->>>>>>> origin/DatingForm
             }} exact={true} />
           </IonRouterOutlet>
         </IonSplitPane>
