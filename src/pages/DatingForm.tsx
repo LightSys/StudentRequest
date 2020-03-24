@@ -23,17 +23,23 @@ const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match })
         </IonHeader>
 
         <IonItem>
-          <IonLabel position="stacked">Nombre de Hombre</IonLabel>
+          <IonLabel position="stacked">
+              <big>Nombre de Hombre</big>
+          </IonLabel>
           <IonInput type="text" />
         </IonItem>
 
         <IonItem>
-          <IonLabel position="stacked">Nombre de Mujer</IonLabel>
+            <IonLabel position="stacked">
+              <big>Nombre de Mujer</big>
+            </IonLabel>
           <IonInput type="text" />
         </IonItem>
 
         <IonItem>
-          <IonLabel position="stacked">Email</IonLabel>
+            <IonLabel position="stacked">
+              <big>Email</big>
+            </IonLabel>
           <IonInput type="text" />
         </IonItem>
 
