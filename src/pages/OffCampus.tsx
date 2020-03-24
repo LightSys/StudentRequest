@@ -4,7 +4,7 @@ import { RouteComponentProps } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import './Page.css';
 
-const Page: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
+const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
   return (
     <IonPage>
       <IonHeader>
@@ -12,7 +12,7 @@ const Page: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>{match.params.name} title</IonTitle>
+          <IonTitle>{match.params.name}</IonTitle>
         </IonToolbar>
       </IonHeader>
 
@@ -28,4 +28,4 @@ const Page: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
   );
 };
 
-export default Page;
+export default OffCampus;

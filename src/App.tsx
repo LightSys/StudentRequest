@@ -24,6 +24,8 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import OffCampus from './pages/OffCampus';
+
 const App: React.FC = () => {
 
   const [selectedPage, setSelectedPage] = useState('');
@@ -39,6 +41,10 @@ const App: React.FC = () => {
               return <Page {...props} />;
             }} exact={true} />
             <Route path="/" render={() => <Redirect to="/page/Inbox" />} exact={true} />
+            <Route path="/offcampus" render={(props) => {
+              setSelectedPage(props.match.params.name);
+              return <OffCampus {...props} />;
+            }} exact={true} />
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>
