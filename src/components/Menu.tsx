@@ -45,10 +45,10 @@ const appPages: AppPage[] = [
     mdIcon: heartSharp
   },
   {
-    title: 'Archived',
-    url: '/page/Archived',
-    iosIcon: archiveOutline,
-    mdIcon: archiveSharp
+    title: 'Dating Form',
+    url: '/DatingForm',
+    iosIcon: heartOutline,
+    mdIcon: heartSharp
   },
   {
     title: 'Trash',
@@ -72,8 +72,7 @@ const Menu: React.FunctionComponent<MenuProps> = ({ selectedPage }) => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-          <IonListHeader>Inbox</IonListHeader>
-          <IonNote>hi@ionicframework.com</IonNote>
+          <IonListHeader>Welcome</IonListHeader>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
