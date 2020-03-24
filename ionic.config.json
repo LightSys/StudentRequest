@@ -1,0 +1,7 @@
+{
+  "name": "StudentRequest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
