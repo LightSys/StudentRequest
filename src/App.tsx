@@ -1,5 +1,6 @@
 import Menu from './components/Menu';
 import Page from './pages/Page';
+import DatingForm from './pages/DatingForm';
 import React, { useState } from 'react';
 import { IonApp, IonRouterOutlet, IonSplitPane } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
@@ -39,6 +40,10 @@ const App: React.FC = () => {
               return <Page {...props} />;
             }} exact={true} />
             <Route path="/" render={() => <Redirect to="/page/Inbox" />} exact={true} />
+            <Route path="/DatingForm" render={(props) => {
+              setSelectedPage(props.match.params.name);
+              return <DatingForm {...props} />;
+            }} exact={true} />
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>
