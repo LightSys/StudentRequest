@@ -49,11 +49,16 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
         </IonItem>
 
         <IonItem>
+          <IonLabel position="stacked"><h1>Location</h1></IonLabel>
+          <IonInput type="text" />
+        </IonItem>
+
+        <IonItem>
           <IonLabel position="stacked"><h1>Reason</h1></IonLabel>
           <IonTextarea />
         </IonItem>
 
-        <IonButton size="large">Submit</IonButton>
+        <IonButton>Submit</IonButton>
 
       </IonContent>
     </IonPage>
