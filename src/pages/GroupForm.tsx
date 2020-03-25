@@ -1,7 +1,7 @@
-import { IonItem,IonInput, IonButtons, IonButton,IonLabel, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonTextarea } from '@ionic/react';
+import { IonItem,IonButtons,IonLabel, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonTextarea, IonButton } from '@ionic/react';
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
-import './Page.css';
+import './GroupForm.css';
 
 
 
@@ -25,22 +25,29 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
             </IonHeader>
 
             <IonItem>
-                <IonLabel position="stacked">Nombres de Hombres</IonLabel>
-                <IonTextarea />
+                <IonLabel class = "label" position="stacked">Nombres de Hombres</IonLabel>
+                <IonTextarea placeholder="Nate Walter, Josh Wright, Joey Faas"></IonTextarea>
             </IonItem>
+
+            <IonItem>
+                <IonLabel class = "label" position="stacked">Nombres de Mujeres</IonLabel>
+                <IonTextarea placeholder="Natalie Walter, Jessica Wright, Josephina Faas"></IonTextarea>
+            </IonItem>
+
+            <IonItem>
+                <IonLabel class = "label" position= "stacked">Email de Jefe</IonLabel>
+                <IonTextarea placeholder = "email@riogrande.edu"></IonTextarea>
+            </IonItem>
+
+            <IonItem>
+                <IonLabel class = "label" position="stacked">Reason</IonLabel>
+                <IonTextarea placeholder= "razon para salir. A donde van?"></IonTextarea>
+            </IonItem>
+
+
+            <IonButton expand= "full" color="secondary">Enviar</IonButton>
             
-            <IonItem>
-                <IonLabel position="stacked">Nombres de Mujeres</IonLabel>
-                <IonTextarea />
-            </IonItem>
-            <IonItem>
-                <IonLabel>Email de Jefe</IonLabel>
-                <IonInput type="text"/>
-            </IonItem>
-            <IonItem>
-                <IonLabel position="stacked">Reason</IonLabel>
-                <IonTextarea />
-            </IonItem>
+
         </IonContent>
     </IonPage>
 
