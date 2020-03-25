@@ -3,6 +3,7 @@ import React from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Form.css';
 
+//Form for Students declaring an official romantic relationship(Permiso de Parejas Oficiales)
 const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
   return (
     <IonPage>
@@ -22,6 +23,7 @@ const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match })
           </IonToolbar>
         </IonHeader>
 
+{/* Form Inputs and Labels - Name of Man, Name of Woman, Email */}
         <IonItem>
           <IonLabel class="padding" position="stacked" >
               Nombre de Hombre
@@ -30,16 +32,16 @@ const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match })
         </IonItem>
 
         <IonItem>
-            <IonLabel class="padding" position="stacked">
+          <IonLabel class="padding" position="stacked">
               Nombre de Mujer
-            </IonLabel>
+          </IonLabel>
           <IonInput class="IonInput" type="text" />
         </IonItem>
 
         <IonItem>
-            <IonLabel class="padding" position="stacked">
+          <IonLabel class="padding" position="stacked">
               Email
-            </IonLabel>
+          </IonLabel>
           <IonInput class="IonInput" type="text" />
         </IonItem>
 

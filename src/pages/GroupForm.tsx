@@ -4,7 +4,7 @@ import { RouteComponentProps } from 'react-router';
 import './Form.css';
 
 
-
+//Permission Form for Mixed Groups (Permiso Mixto) 
 const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
   return (
     <IonPage>
@@ -25,23 +25,32 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
                 </IonToolbar>
             </IonHeader>
 
+{/* Form Inputs and Labels - List of Men, Women, Email, and then Reason */}
             <IonItem>
-                <IonLabel class = "label" position="stacked">Nombres de Hombres</IonLabel>
+                <IonLabel class = "label" position="stacked">
+                    Nombres de Hombres
+                </IonLabel>
                 <IonTextarea placeholder="Nate Walter, Josh Wright, Joey Faas"></IonTextarea>
             </IonItem>
 
             <IonItem>
-                <IonLabel class = "label" position="stacked">Nombres de Mujeres</IonLabel>
+                <IonLabel class = "label" position="stacked">
+                    Nombres de Mujeres
+                </IonLabel>
                 <IonTextarea placeholder="Natalie Walter, Jessica Wright, Josephina Faas"></IonTextarea>
             </IonItem>
 
             <IonItem>
-                <IonLabel class = "label" position= "stacked">Email de Jefe</IonLabel>
+                <IonLabel class = "label" position= "stacked">
+                    Email de Jefe
+                </IonLabel>
                 <IonInput placeholder = "email@riogrande.edu"></IonInput>
             </IonItem>
 
             <IonItem>
-                <IonLabel class = "label" position="stacked">Reason</IonLabel>
+                <IonLabel class = "label" position="stacked">
+                    Reason
+                </IonLabel>
                 <IonTextarea placeholder= "razon para salir. A donde van?"></IonTextarea>
             </IonItem>
 
