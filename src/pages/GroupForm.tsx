@@ -54,6 +54,7 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
                 <IonTextarea placeholder= "razon para salir. A donde van?"></IonTextarea>
             </IonItem>
 
+            <IonItem lines="none"></IonItem>
 
             <IonButton expand= "block">Enviar</IonButton>
             

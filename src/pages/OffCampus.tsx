@@ -39,11 +39,11 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
               Gènero
             </IonLabel>
           </IonListHeader>
-          <IonItem>
+          <IonItem lines="none">
             <IonLabel>Hombre</IonLabel>
             <IonRadio slot="start" value="hombre"></IonRadio>
           </IonItem>
-          <IonItem>
+          <IonItem lines="none">
             <IonLabel>Mujer</IonLabel>
             <IonRadio slot="start" value="mujer"></IonRadio>
           </IonItem>
@@ -63,6 +63,8 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
           <IonLabel position="stacked">Reason</IonLabel>
           <IonTextarea />
         </IonItem>
+
+        <IonItem lines="none" />
 
         <IonButton expand="block">Submit</IonButton>
 
