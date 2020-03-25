@@ -31,8 +31,3 @@ ion-label.label {
     font-size: 18px !important;
 }
 
-IonItem {
-    --border-width: 0px !important;
-    --border-color: white !important;
-    border-style: unset !important;
-}

@@ -2,6 +2,7 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Form.css';
+import "@ionic/react/css/core.css"
 
 const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
   return (
@@ -22,28 +23,28 @@ const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match })
           </IonToolbar>
         </IonHeader>
 
-        <IonItem>
+        <IonItem lines="none">
           <IonLabel class="padding" position="stacked" >
               Nombre de Hombre
           </IonLabel>
           <IonInput class="IonInput" type="text" />
         </IonItem>
 
-        <IonItem>
+        <IonItem lines="none">
             <IonLabel class="padding" position="stacked">
               Nombre de Mujer
             </IonLabel>
           <IonInput class="IonInput" type="text" />
         </IonItem>
 
-        <IonItem>
+        <IonItem lines="none">
             <IonLabel class="padding" position="stacked">
               Email
             </IonLabel>
           <IonInput class="IonInput" type="text" />
         </IonItem>
 
-        <IonItem></IonItem>
+        <IonItem lines="none"></IonItem>
 
         <IonButton class="IonButton" expand="block">
           <IonLabel class="font-size">Enviar</IonLabel>

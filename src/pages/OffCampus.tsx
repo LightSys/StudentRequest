@@ -24,39 +24,41 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
           </IonToolbar>
         </IonHeader>
 
-        <IonItem>
-          <IonLabel position="stacked"><h1>Name</h1></IonLabel>
-          <IonInput type="text" />
+        <IonItem lines="none">
+          <IonLabel class="padding"position="stacked"><h1>Name</h1></IonLabel>
+          <IonInput class="IonInput" type="text" />
         </IonItem>
 
         <IonRadioGroup value="hombre">
           <IonListHeader>
-            <IonLabel position="stacked"><h1>Gènero</h1></IonLabel>
+            <IonLabel class="padding"position="stacked"><h1>Gènero</h1></IonLabel>
           </IonListHeader>
-          <IonItem>
+          <IonItem lines="none">
             <IonLabel>Hombre</IonLabel>
             <IonRadio slot="start" value="hombre"></IonRadio>
           </IonItem>
-          <IonItem>
+          <IonItem lines="none">
             <IonLabel>Mujer</IonLabel>
             <IonRadio slot="start" value="mujer"></IonRadio>
           </IonItem>
         </IonRadioGroup>
 
-        <IonItem>
-          <IonLabel position="stacked"><h1>Email</h1></IonLabel>
-          <IonInput type="text" />
+        <IonItem lines="none">
+          <IonLabel class="padding"position="stacked"><h1>Email</h1></IonLabel>
+          <IonInput class="IonInput" type="text" />
         </IonItem>
 
-        <IonItem>
-          <IonLabel position="stacked"><h1>Location</h1></IonLabel>
-          <IonInput type="text" />
+        <IonItem lines="none">
+          <IonLabel class="padding"position="stacked"><h1>Location</h1></IonLabel>
+          <IonInput class="IonInput" type="text" />
         </IonItem>
 
-        <IonItem>
-          <IonLabel position="stacked"><h1>Reason</h1></IonLabel>
-          <IonTextarea />
+        <IonItem lines="none">
+          <IonLabel class="padding"position="stacked"><h1>Reason</h1></IonLabel>
+          <IonTextarea class="IonInput" />
         </IonItem>
+
+        <IonItem lines="none" />
 
         <IonButton expand="block">Submit</IonButton>
 

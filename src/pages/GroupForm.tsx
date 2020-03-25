@@ -25,26 +25,27 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
                 </IonToolbar>
             </IonHeader>
 
-            <IonItem>
-                <IonLabel class = "label" position="stacked">Nombres de Hombres</IonLabel>
-                <IonTextarea placeholder="Nate Walter, Josh Wright, Joey Faas"></IonTextarea>
+            <IonItem lines="none">
+                <IonLabel class = "padding" position="stacked">Nombres de Hombres</IonLabel>
+                <IonTextarea class="IonInput" placeholder="Nate Walter, Josh Wright, Joey Faas"></IonTextarea>
             </IonItem>
 
-            <IonItem>
-                <IonLabel class = "label" position="stacked">Nombres de Mujeres</IonLabel>
-                <IonTextarea placeholder="Natalie Walter, Jessica Wright, Josephina Faas"></IonTextarea>
+            <IonItem lines="none">
+                <IonLabel class = "padding" position="stacked">Nombres de Mujeres</IonLabel>
+                <IonTextarea class="IonInput" placeholder="Natalie Walter, Jessica Wright, Josephina Faas"></IonTextarea>
             </IonItem>
 
-            <IonItem>
-                <IonLabel class = "label" position= "stacked">Email de Jefe</IonLabel>
-                <IonInput placeholder = "email@riogrande.edu"></IonInput>
+            <IonItem lines="none">
+                <IonLabel class = "padding" position= "stacked">Email de Jefe</IonLabel>
+                <IonInput class="IonInput" placeholder = "email@riogrande.edu"></IonInput>
             </IonItem>
 
-            <IonItem>
-                <IonLabel class = "label" position="stacked">Reason</IonLabel>
-                <IonTextarea placeholder= "razon para salir. A donde van?"></IonTextarea>
+            <IonItem lines="none">
+                <IonLabel class = "padding" position="stacked">Reason</IonLabel>
+                <IonTextarea class="IonInput" placeholder= "razon para salir. A donde van?"></IonTextarea>
             </IonItem>
 
+            <IonItem lines="none"></IonItem>
 
             <IonButton expand= "block">Enviar</IonButton>
             
