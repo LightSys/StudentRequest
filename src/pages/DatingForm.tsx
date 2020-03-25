@@ -4,6 +4,7 @@ import { RouteComponentProps } from 'react-router';
 import './Form.css';
 import "@ionic/react/css/core.css"
 
+//Form for Students declaring an official romantic relationship(Permiso de Parejas Oficiales)
 const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
   return (
     <IonPage>
@@ -33,14 +34,14 @@ const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match })
         <IonItem lines="none">
             <IonLabel class="padding" position="stacked">
               Nombre de Mujer
-            </IonLabel>
+          </IonLabel>
           <IonInput class="IonInput" type="text" />
         </IonItem>
 
         <IonItem lines="none">
             <IonLabel class="padding" position="stacked">
               Email
-            </IonLabel>
+          </IonLabel>
           <IonInput class="IonInput" type="text" />
         </IonItem>
 

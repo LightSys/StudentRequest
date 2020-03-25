@@ -4,7 +4,7 @@ import { RouteComponentProps } from 'react-router';
 import './Form.css';
 
 
-
+//Permission Form for Mixed Groups (Permiso Mixto) 
 const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
   return (
     <IonPage>
@@ -25,24 +25,40 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
                 </IonToolbar>
             </IonHeader>
 
-            <IonItem lines="none">
-                <IonLabel class = "padding" position="stacked">Nombres de Hombres</IonLabel>
-                <IonTextarea class="IonInput" placeholder="Nate Walter, Josh Wright, Joey Faas"></IonTextarea>
+{/* Form Inputs and Labels - List of Men, Women, Email, and then Reason */}
+            <IonItem>
+                <IonLabel class = "label" position="stacked">
+                    Nombres de Hombres
+                </IonLabel>
+                <IonTextarea placeholder="Nate Walter, Josh Wright, Joey Faas"></IonTextarea>
             </IonItem>
 
-            <IonItem lines="none">
-                <IonLabel class = "padding" position="stacked">Nombres de Mujeres</IonLabel>
-                <IonTextarea class="IonInput" placeholder="Natalie Walter, Jessica Wright, Josephina Faas"></IonTextarea>
+            <IonItem>
+                <IonLabel class = "label" position="stacked">
+                    Nombres de Mujeres
+                </IonLabel>
+                <IonTextarea placeholder="Natalie Walter, Jessica Wright, Josephina Faas"></IonTextarea>
             </IonItem>
 
-            <IonItem lines="none">
-                <IonLabel class = "padding" position= "stacked">Email de Jefe</IonLabel>
-                <IonInput class="IonInput" placeholder = "email@riogrande.edu"></IonInput>
+            <IonItem>
+                <IonLabel class = "label" position= "stacked">
+                    Email
+                </IonLabel>
+                <IonInput placeholder = "email@riogrande.edu"></IonInput>
             </IonItem>
 
-            <IonItem lines="none">
-                <IonLabel class = "padding" position="stacked">Reason</IonLabel>
-                <IonTextarea class="IonInput" placeholder= "razon para salir. A donde van?"></IonTextarea>
+            <IonItem>
+                <IonLabel class = "label" position="stacked">
+                    Donde?
+                </IonLabel>
+                <IonInput placeholder= " A donde van?"></IonInput>
+            </IonItem>
+
+            <IonItem>
+                <IonLabel class = "label" position="stacked">
+                    Reason
+                </IonLabel>
+                <IonTextarea placeholder= "razon para salir"></IonTextarea>
             </IonItem>
 
             <IonItem lines="none"></IonItem>

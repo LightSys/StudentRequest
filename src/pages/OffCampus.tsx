@@ -4,6 +4,8 @@ import React from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Form.css';
 
+
+//Permission Form to Sleep Away From Campus(Dormir Fuera del Dormitorio)
 const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
   return (
     <IonPage>
@@ -12,7 +14,7 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>Off Campus</IonTitle>
+          <IonTitle>Permiso Para Dormir Fuera del Dormitorio</IonTitle>
         </IonToolbar>
       </IonHeader>
 
@@ -23,15 +25,20 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
             <IonTitle size="small"></IonTitle>
           </IonToolbar>
         </IonHeader>
-
-        <IonItem lines="none">
-          <IonLabel class="padding"position="stacked"><h1>Name</h1></IonLabel>
-          <IonInput class="IonInput" type="text" />
+        
+{/* Form Inputs and Labels - Name, Gender Selection, Email */}
+        <IonItem>
+          <IonLabel position="stacked">
+            Nombre
+          </IonLabel>
+          <IonInput type="text" />
         </IonItem>
 
         <IonRadioGroup value="hombre">
           <IonListHeader>
-            <IonLabel class="padding"position="stacked"><h1>Gènero</h1></IonLabel>
+            <IonLabel position="stacked">
+              Gènero
+            </IonLabel>
           </IonListHeader>
           <IonItem lines="none">
             <IonLabel>Hombre</IonLabel>
@@ -49,12 +56,12 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
         </IonItem>
 
         <IonItem lines="none">
-          <IonLabel class="padding"position="stacked">Location</IonLabel>
+          <IonLabel class="padding"position="stacked">Donde?</IonLabel>
           <IonInput class="IonInput" type="text" />
         </IonItem>
 
         <IonItem lines="none">
-          <IonLabel class="padding"position="stacked">Reason</IonLabel>
+          <IonLabel class="padding"position="stacked">Razon</IonLabel>
           <IonTextarea class="IonInput" />
         </IonItem>
 
