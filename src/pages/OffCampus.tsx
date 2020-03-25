@@ -14,7 +14,7 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>Dormir fuera del Dormitorio</IonTitle>
+          <IonTitle>Permiso Para Dormir Fuera del Dormitorio</IonTitle>
         </IonToolbar>
       </IonHeader>
 
@@ -25,6 +25,7 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
             <IonTitle size="small"></IonTitle>
           </IonToolbar>
         </IonHeader>
+        
 {/* Form Inputs and Labels - Name, Gender Selection, Email */}
         <IonItem>
           <IonLabel position="stacked">
@@ -55,12 +56,12 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
         </IonItem>
 
         <IonItem>
-          <IonLabel position="stacked">Location</IonLabel>
+          <IonLabel position="stacked">Donde?</IonLabel>
           <IonInput type="text" />
         </IonItem>
 
         <IonItem>
-          <IonLabel position="stacked">Reason</IonLabel>
+          <IonLabel position="stacked">Razon</IonLabel>
           <IonTextarea />
         </IonItem>
 

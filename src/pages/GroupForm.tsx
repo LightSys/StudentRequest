@@ -42,16 +42,23 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
 
             <IonItem>
                 <IonLabel class = "label" position= "stacked">
-                    Email de Jefe
+                    Email
                 </IonLabel>
                 <IonInput placeholder = "email@riogrande.edu"></IonInput>
             </IonItem>
 
             <IonItem>
                 <IonLabel class = "label" position="stacked">
+                    Donde?
+                </IonLabel>
+                <IonInput placeholder= " A donde van?"></IonInput>
+            </IonItem>
+
+            <IonItem>
+                <IonLabel class = "label" position="stacked">
                     Reason
                 </IonLabel>
-                <IonTextarea placeholder= "razon para salir. A donde van?"></IonTextarea>
+                <IonTextarea placeholder= "razon para salir"></IonTextarea>
             </IonItem>
 
             <IonItem lines="none"></IonItem>
