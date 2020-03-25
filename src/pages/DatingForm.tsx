@@ -1,7 +1,7 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonLabel,IonItem,IonInput, IonButton } from '@ionic/react';
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
-import './Page.css';
+import './DatingForm.css';
 
 const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
   return (
@@ -23,27 +23,30 @@ const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match })
         </IonHeader>
 
         <IonItem>
-          <IonLabel position="stacked">
-              <big>Nombre de Hombre</big>
+          <IonLabel class="padding" position="stacked" >
+              Nombre de Hombre
           </IonLabel>
-          <IonInput type="text" />
+          <IonInput class="IonInput" type="text" />
         </IonItem>
 
         <IonItem>
-            <IonLabel position="stacked">
-              <big>Nombre de Mujer</big>
+            <IonLabel class="padding" position="stacked">
+              Nombre de Mujer
             </IonLabel>
-          <IonInput type="text" />
+          <IonInput class="IonInput" type="text" />
         </IonItem>
 
         <IonItem>
-            <IonLabel position="stacked">
-              <big>Email</big>
+            <IonLabel class="padding" position="stacked">
+              Email
             </IonLabel>
-          <IonInput type="text" />
+          <IonInput class="IonInput" type="text" />
         </IonItem>
 
-        <IonButton color="success">Enviar</IonButton>
+        <IonItem class="padding">
+          <IonButton class="IonButton" color="success">Enviar</IonButton>
+        </IonItem>
+        
 
       </IonContent>
     </IonPage>
