@@ -1,7 +1,9 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButtons, IonButton, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Page.css';
+
+
 
 const Page: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
   return (
@@ -22,9 +24,16 @@ const Page: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
             <IonTitle size="small"></IonTitle>
           </IonToolbar>
         </IonHeader>
+        <h1>{match.params.name}</h1>
+        <IonContent>
+          <IonButton color="warning" id = "GroupForm">GroupForm</IonButton>
+          <IonButton color="warning">Night</IonButton>
+          <IonButton color="warning">Parejas</IonButton>
+        </IonContent>
       </IonContent>
     </IonPage>
   );
 };
+
 
 export default Page;

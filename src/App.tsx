@@ -25,6 +25,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 
 import OffCampus from './pages/OffCampus';
+import GroupForm from './pages/GroupForm';
 
 const App: React.FC = () => {
 
@@ -45,6 +46,10 @@ const App: React.FC = () => {
               setSelectedPage(props.match.params.name);
               return <OffCampus {...props} />;
             }} exact={true} />
+            <Route path="/GroupForm" render={(props) => {
+              setSelectedPage(props.match.params.name);
+              return <GroupForm {...props} />;
+              }} exact={true} />
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>
