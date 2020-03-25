@@ -30,6 +30,7 @@ import DatingForm from './pages/DatingForm';
 
 const App: React.FC = () => {
 
+  // eslint-disable-next-line
   const [selectedPage, setSelectedPage] = useState('');
 
   return (
