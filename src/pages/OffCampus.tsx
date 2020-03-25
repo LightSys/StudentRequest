@@ -27,16 +27,16 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
         </IonHeader>
         
 {/* Form Inputs and Labels - Name, Gender Selection, Email */}
-        <IonItem>
-          <IonLabel position="stacked">
+        <IonItem lines="none">
+          <IonLabel class="padding" position="stacked">
             Nombre
           </IonLabel>
-          <IonInput type="text" />
+          <IonInput class="IonInput" type="text" />
         </IonItem>
 
         <IonRadioGroup value="hombre">
           <IonListHeader>
-            <IonLabel position="stacked">
+            <IonLabel class="padding" position="stacked">
               Gènero
             </IonLabel>
           </IonListHeader>

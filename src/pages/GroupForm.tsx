@@ -26,39 +26,39 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
             </IonHeader>
 
 {/* Form Inputs and Labels - List of Men, Women, Email, and then Reason */}
-            <IonItem>
-                <IonLabel class = "label" position="stacked">
+            <IonItem lines="none">
+                <IonLabel class = "padding" position="stacked">
                     Nombres de Hombres
                 </IonLabel>
-                <IonTextarea placeholder="Nate Walter, Josh Wright, Joey Faas"></IonTextarea>
+                <IonTextarea class="IonInput" placeholder="Nate Walter, Josh Wright, Joey Faas"></IonTextarea>
             </IonItem>
 
-            <IonItem>
-                <IonLabel class = "label" position="stacked">
+            <IonItem lines="none">
+                <IonLabel class = "padding" position="stacked">
                     Nombres de Mujeres
                 </IonLabel>
-                <IonTextarea placeholder="Natalie Walter, Jessica Wright, Josephina Faas"></IonTextarea>
+                <IonTextarea class="IonInput" placeholder="Natalie Walter, Jessica Wright, Josephina Faas"></IonTextarea>
             </IonItem>
 
-            <IonItem>
-                <IonLabel class = "label" position= "stacked">
+            <IonItem lines="none">
+                <IonLabel class = "padding" position= "stacked">
                     Email
                 </IonLabel>
-                <IonInput placeholder = "email@riogrande.edu"></IonInput>
+                <IonInput class="IonInput" placeholder = "email@riogrande.edu"></IonInput>
             </IonItem>
 
-            <IonItem>
-                <IonLabel class = "label" position="stacked">
+            <IonItem lines="none">
+                <IonLabel class = "padding" position="stacked">
                     Donde?
                 </IonLabel>
-                <IonInput placeholder= " A donde van?"></IonInput>
+                <IonInput class="IonInput" placeholder= " A donde van?"></IonInput>
             </IonItem>
 
-            <IonItem>
-                <IonLabel class = "label" position="stacked">
+            <IonItem lines="none">
+                <IonLabel class = "padding" position="stacked">
                     Reason
                 </IonLabel>
-                <IonTextarea placeholder= "razon para salir"></IonTextarea>
+                <IonTextarea class="IonInput" placeholder= "razon para salir"></IonTextarea>
             </IonItem>
 
             <IonItem lines="none"></IonItem>
