@@ -6,8 +6,7 @@ import {
   IonList,
   IonListHeader,
   IonMenu,
-  IonMenuToggle,
-  IonNote,
+  IonMenuToggle
 } from '@ionic/react';
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
