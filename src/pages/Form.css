@@ -1,0 +1,38 @@
+ion-content ion-toolbar {
+    --background: transparent;
+  }
+
+.padding {
+  font-size: 25px !important;
+  padding-bottom: 1.25em !important;
+}
+
+.IonInput {
+  --padding-top: 0px !important; 
+  --background: rgb(243, 243, 243);
+  --color: black;
+  border-radius: 3px !important;
+}
+
+.IonButton{
+  --padding-end: 5em !important;
+  --padding-bottom: 2em !important;
+  --padding-top: 2em !important;
+}
+
+ion-label.label {
+    font-size: 30px !important; 
+    font-style: normal !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    
+}
+
+.font-size {
+    font-size: 18px !important;
+}
+
+IonItem {
+    --border-width: 0px !important;
+    --border-color: white !important;
+    border-style: unset !important;
+}
