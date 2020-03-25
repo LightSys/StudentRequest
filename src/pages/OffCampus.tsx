@@ -1,4 +1,5 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonInput, IonItem, IonLabel, IonRadioGroup, IonRadio, IonListHeader, IonTextarea } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar,
+  IonInput, IonItem, IonLabel, IonRadioGroup, IonRadio, IonListHeader, IonTextarea, IonButton } from '@ionic/react';
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Page.css';
@@ -24,13 +25,13 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
         </IonHeader>
 
         <IonItem>
-          <IonLabel position="stacked">Name</IonLabel>
+          <IonLabel position="stacked"><h1>Name</h1></IonLabel>
           <IonInput type="text" />
         </IonItem>
 
         <IonRadioGroup value="hombre">
           <IonListHeader>
-            <IonLabel>Gènero</IonLabel>
+            <IonLabel position="stacked"><h1>Gènero</h1></IonLabel>
           </IonListHeader>
           <IonItem>
             <IonLabel>Hombre</IonLabel>
@@ -43,14 +44,16 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
         </IonRadioGroup>
 
         <IonItem>
-          <IonLabel position="stacked">Email</IonLabel>
+          <IonLabel position="stacked"><h1>Email</h1></IonLabel>
           <IonInput type="text" />
         </IonItem>
 
         <IonItem>
-          <IonLabel position="stacked">Reason</IonLabel>
+          <IonLabel position="stacked"><h1>Reason</h1></IonLabel>
           <IonTextarea />
         </IonItem>
+
+        <IonButton size="large">Submit</IonButton>
 
       </IonContent>
     </IonPage>
