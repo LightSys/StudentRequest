@@ -11,7 +11,7 @@ import {
 } from '@ionic/react';
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
-import {  paperPlaneOutline, paperPlaneSharp, addOutline } from 'ionicons/icons';
+import {  paperPlaneOutline, paperPlaneSharp, addOutline, heartOutline, heartSharp } from 'ionicons/icons';
 import './Menu.css';
 
 interface MenuProps extends RouteComponentProps {
@@ -43,6 +43,12 @@ const appPages: AppPage[] = [
     url: '/GroupForm',
     iosIcon: paperPlaneOutline,
     mdIcon: paperPlaneSharp 
+  },
+  {
+    title: 'Dating Form',
+    url: '/DatingForm',
+    iosIcon: heartOutline,
+    mdIcon: heartSharp
   }
 ];
 
@@ -52,9 +58,8 @@ const Menu: React.FunctionComponent<MenuProps> = ({ selectedPage }) => {
   return (
     <IonMenu contentId="main" type="overlay">
       <IonContent>
-        <IonList id="menu-list">
-          <IonListHeader>Menu</IonListHeader>
-          <IonNote>hi@ionicframework.com</IonNote>
+        <IonList id="inbox-list">
+          <IonListHeader>Welcome</IonListHeader>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>

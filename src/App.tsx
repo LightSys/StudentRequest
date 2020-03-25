@@ -24,8 +24,10 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+/* Pages */
 import OffCampus from './pages/OffCampus';
 import GroupForm from './pages/GroupForm';
+import DatingForm from './pages/DatingForm';
 
 const App: React.FC = () => {
 
@@ -42,13 +44,17 @@ const App: React.FC = () => {
               return <Page {...props} />;
             }} exact={true} />
             <Route path="/" render={() => <Redirect to="/page/Inbox" />} exact={true} />
-            <Route path="/offcampus" render={(props) => {
+            <Route path="/DatingForm" render={(props) => {
               setSelectedPage(props.match.params.name);
-              return <OffCampus {...props} />;
+              return <DatingForm {...props} />;
             }} exact={true} />
             <Route path="/GroupForm" render={(props) => {
               setSelectedPage(props.match.params.name);
               return <GroupForm {...props} />;
+              }} exact={true} />
+            <Route path="/offcampus" render={(props) => {
+              setSelectedPage(props.match.params.name);
+              return <OffCampus {...props} />;
               }} exact={true} />
           </IonRouterOutlet>
         </IonSplitPane>
