@@ -26,9 +26,9 @@ const Page: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
         </IonHeader>
         <h1>{match.params.name}</h1>
         <IonContent>
-          <IonButton color="warning" id = "GroupForm">GroupForm</IonButton>
-          <IonButton color="warning">Night</IonButton>
-          <IonButton color="warning">Parejas</IonButton>
+          <IonButton color="warning" href="/GroupForm">GroupForm</IonButton>
+          <IonButton color="warning" href="/offcampus">Night</IonButton>
+          <IonButton color="warning" href="/DatingForm">Parejas</IonButton>
         </IonContent>
       </IonContent>
     </IonPage>

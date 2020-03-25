@@ -1,4 +1,4 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonLabel,IonItem,IonInput, IonButton } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonLabel,IonItem,IonInput, IonButton, IonBackButton } from '@ionic/react';
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Form.css';
@@ -11,7 +11,7 @@ const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match })
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonMenuButton />
+            <IonBackButton defaultHref="/home" />
           </IonButtons>
           <IonTitle>Permiso de Parejas Oficiales</IonTitle>
         </IonToolbar>
