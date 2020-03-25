@@ -33,8 +33,8 @@ const appPages: AppPage[] = [
     mdIcon: mailSharp
   },
   {
-    title: 'Outbox',
-    url: '/page/Outbox',
+    title: 'Off Campus',
+    url: '/offcampus',
     iosIcon: paperPlaneOutline,
     mdIcon: paperPlaneSharp
   },
