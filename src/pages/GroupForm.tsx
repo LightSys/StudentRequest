@@ -1,7 +1,7 @@
-import { IonItem,IonButtons,IonLabel, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonTextarea, IonButton } from '@ionic/react';
+import { IonItem,IonButtons,IonLabel, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonTextarea, IonButton, IonMenuButton, IonInput } from '@ionic/react';
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
-import './GroupForm.css';
+import './Form.css';
 
 
 
@@ -11,6 +11,7 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
         <IonHeader>
             <IonToolbar>
                 <IonButtons slot="start">
+                    <IonMenuButton />
                 </IonButtons>
                 <IonTitle>Permiso Mixto</IonTitle>
             </IonToolbar>
@@ -36,7 +37,7 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
 
             <IonItem>
                 <IonLabel class = "label" position= "stacked">Email de Jefe</IonLabel>
-                <IonTextarea placeholder = "email@riogrande.edu"></IonTextarea>
+                <IonInput placeholder = "email@riogrande.edu"></IonInput>
             </IonItem>
 
             <IonItem>
@@ -45,7 +46,7 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
             </IonItem>
 
 
-            <IonButton expand= "full" color="secondary">Enviar</IonButton>
+            <IonButton expand= "block">Enviar</IonButton>
             
 
         </IonContent>

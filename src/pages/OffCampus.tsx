@@ -2,7 +2,7 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
   IonInput, IonItem, IonLabel, IonRadioGroup, IonRadio, IonListHeader, IonTextarea, IonButton } from '@ionic/react';
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
-import './Page.css';
+import './Form.css';
 
 const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
   return (
@@ -58,7 +58,7 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
           <IonTextarea />
         </IonItem>
 
-        <IonButton>Submit</IonButton>
+        <IonButton expand="block">Submit</IonButton>
 
       </IonContent>
     </IonPage>
