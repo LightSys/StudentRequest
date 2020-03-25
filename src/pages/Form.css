@@ -8,10 +8,11 @@ ion-content ion-toolbar {
 }
 
 .IonInput {
-  --padding-top: 0px !important; 
+  --padding-top: 5px !important;
+  padding-left: 10px !important;
   --background: rgb(243, 243, 243);
   --color: black;
-  border-radius: 3px !important;
+  border-radius: 0px !important;
 }
 
 .IonButton{

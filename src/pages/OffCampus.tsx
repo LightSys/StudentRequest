@@ -44,23 +44,25 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
         </IonRadioGroup>
 
         <IonItem lines="none">
-          <IonLabel class="padding"position="stacked"><h1>Email</h1></IonLabel>
+          <IonLabel class="padding"position="stacked">Email</IonLabel>
           <IonInput class="IonInput" type="text" />
         </IonItem>
 
         <IonItem lines="none">
-          <IonLabel class="padding"position="stacked"><h1>Location</h1></IonLabel>
+          <IonLabel class="padding"position="stacked">Location</IonLabel>
           <IonInput class="IonInput" type="text" />
         </IonItem>
 
         <IonItem lines="none">
-          <IonLabel class="padding"position="stacked"><h1>Reason</h1></IonLabel>
+          <IonLabel class="padding"position="stacked">Reason</IonLabel>
           <IonTextarea class="IonInput" />
         </IonItem>
 
         <IonItem lines="none" />
 
-        <IonButton expand="block">Submit</IonButton>
+        <IonButton class="IonButton" expand="block">
+          <IonLabel class="font-size">Enviar</IonLabel>
+        </IonButton>
 
       </IonContent>
     </IonPage>
