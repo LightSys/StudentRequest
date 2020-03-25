@@ -1,4 +1,4 @@
-import { IonButtons, IonButton, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButtons, IonButton, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonGrid, IonRow, IonCol } from '@ionic/react';
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Form.css';
@@ -13,7 +13,7 @@ const Page: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>{match.params.name} title</IonTitle>
+          <IonTitle>Hola, Bienvenidos!</IonTitle>
         </IonToolbar>
       </IonHeader>
 
@@ -24,12 +24,29 @@ const Page: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
             <IonTitle size="small"></IonTitle>
           </IonToolbar>
         </IonHeader>
-        <h1>{match.params.name}</h1>
-        <IonContent>
-          <IonButton color="warning" href="/GroupForm">GroupForm</IonButton>
-          <IonButton color="warning" href="/offcampus">Night</IonButton>
-          <IonButton color="warning" href="/DatingForm">Parejas</IonButton>
-        </IonContent>
+        
+        <IonGrid>
+          <IonRow>
+            <IonCol>
+              <IonButton expand="block" href="/GroupForm"><IonLabel class="font-size">Permiso Mixto</IonLabel></IonButton>
+            </IonCol>
+          </IonRow>
+
+          <IonRow>
+            <IonCol>
+              <IonButton expand="block" href="/offcampus"><IonLabel class="font-size">Dormir Fuera</IonLabel></IonButton>
+            </IonCol>
+          </IonRow>
+
+          <IonRow>
+            <IonCol>
+              <IonButton expand="block" href="/DatingForm"><IonLabel class="font-size">Permiso de Parejas Oficiales</IonLabel></IonButton>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
+          
+          {/* <IonItem lines="none" /> */}
+          <IonItem lines="none" />
       </IonContent>
     </IonPage>
   );

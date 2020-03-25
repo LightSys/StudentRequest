@@ -16,7 +16,7 @@ ion-content ion-toolbar {
 }
 
 .IonButton{
-  --padding-end: 5em !important;
+  --padding-end: 0em !important;
   --padding-bottom: 2em !important;
   --padding-top: 2em !important;
 }
