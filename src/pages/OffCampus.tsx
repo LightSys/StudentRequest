@@ -18,7 +18,7 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
       <IonContent>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">{ match.params.name }</IonTitle>
+            <IonTitle size="large">{match.params.name}</IonTitle>
             <IonTitle size="small"></IonTitle>
           </IonToolbar>
         </IonHeader>
@@ -29,17 +29,17 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
         </IonItem>
 
         <IonRadioGroup value="hombre">
-            <IonListHeader>
-                <IonLabel>Gènero</IonLabel>
-            </IonListHeader>
-            <IonItem>
-                <IonLabel>Hombre</IonLabel>
-                <IonRadio slot="start" value="hombre"></IonRadio>
-            </IonItem>
-            <IonItem>
-                <IonLabel>Mujer</IonLabel>
-                <IonRadio slot="start" value="mujer"></IonRadio>
-            </IonItem>
+          <IonListHeader>
+            <IonLabel>Gènero</IonLabel>
+          </IonListHeader>
+          <IonItem>
+            <IonLabel>Hombre</IonLabel>
+            <IonRadio slot="start" value="hombre"></IonRadio>
+          </IonItem>
+          <IonItem>
+            <IonLabel>Mujer</IonLabel>
+            <IonRadio slot="start" value="mujer"></IonRadio>
+          </IonItem>
         </IonRadioGroup>
 
         <IonItem>
@@ -48,8 +48,8 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
         </IonItem>
 
         <IonItem>
-            <IonLabel position="stacked">Reason</IonLabel>
-            <IonTextarea />
+          <IonLabel position="stacked">Reason</IonLabel>
+          <IonTextarea />
         </IonItem>
 
       </IonContent>
