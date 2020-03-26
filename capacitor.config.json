@@ -1,6 +1,7 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "StudentRequest",
+  "appId": "edu.riogrande.requests",
+  "appName": "Rio Grande Student Requests",
+  "linuxAndroidStudioPath": "/usr/bin/android-studio",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "build",
