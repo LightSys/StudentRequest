@@ -18,14 +18,14 @@ const Login: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) => {
                         <IonLabel class = "padding" position ="stacked">
                             Username
                         </IonLabel>
-                        <IonInput class="IonInput" placeholder="Username"></IonInput>
+                        <IonInput class="IonInput" placeholder="Username" type="text"></IonInput>
                 </IonItem>
 
                 <IonItem lines ="none">
                         <IonLabel class = "padding" position ="stacked">
                             Password
                         </IonLabel>
-                        <IonInput class="IonInput" placeholder="Password"></IonInput>
+                        <IonInput class="IonInput" placeholder="Password" type="password"></IonInput>
                 </IonItem>
 
 
