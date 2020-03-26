@@ -1,4 +1,4 @@
-import { IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonLabel,IonItem,IonInput, IonButton, IonBackButton } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonLabel,IonItem,IonInput, IonButton, IonBackButton, IonToast } from '@ionic/react';
 import React, {useState} from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Form.css';
@@ -36,6 +36,8 @@ function handleEmail(event: any) {
 
 //Form for Students declaring an official romantic relationship(Permiso de Parejas Oficiales)
 const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
+  const [showToast, setShowToast] = useState(false);
+
   return (
     <IonPage>
       <IonHeader>
@@ -77,9 +79,16 @@ const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match })
 
         <IonItem lines="none"></IonItem>
 
-        <IonButton class="IonButton" expand="block" onClick={() => handleSubmit()} type="submit">
+        <IonButton class="IonButton" expand="block" onClick={() => {handleSubmit(); setShowToast(true)}} type="submit">
           <IonLabel class="font-size">Enviar</IonLabel>
         </IonButton>
+
+        <IonToast
+          message="Form submitted!"
+          isOpen={showToast}
+          onDidDismiss={() => setShowToast(false)}
+          duration={2000}
+        />
 
       </IonContent>
     </IonPage>
