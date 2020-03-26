@@ -1,4 +1,4 @@
-import { RouteComponentProps, Redirect } from "react-router";
+import { RouteComponentProps } from "react-router";
 import React from 'react';
 import { IonHeader, IonToolbar, IonTitle, IonPage, IonLabel, IonItem, IonInput, IonContent, IonButton} from '@ionic/react';
 import './Form.css'
