@@ -1,9 +1,10 @@
 import { IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonLabel,IonItem,IonInput, IonButton, IonBackButton } from '@ionic/react';
+// eslint-disable-next-line
 import React, {useState} from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Form.css';
 import "@ionic/react/css/core.css"
-import { stringify } from 'querystring';
+
 
 
 let hombre: string = "";
