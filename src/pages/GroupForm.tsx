@@ -1,11 +1,12 @@
-import { IonItem, IonButtons, IonLabel, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonTextarea, IonButton, IonInput, IonBackButton } from '@ionic/react';
-import React from 'react';
+import { IonItem, IonButtons, IonLabel, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonTextarea, IonButton, IonInput, IonBackButton, IonToast } from '@ionic/react';
+import React, {useState} from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Form.css';
 
 
 //Permission Form for Mixed Groups (Permiso Mixto) 
 const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
+    const [showToast, setShowToast] = useState(false);
     return (
         <IonPage>
             <IonHeader>
@@ -63,9 +64,16 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
 
                 <IonItem lines="none"></IonItem>
 
-                <IonButton class="IonButton" expand="block">
+                <IonButton class="IonButton" expand="block" onClick={() => {setShowToast(true)}}>
                     <IonLabel class="font-size">Enviar</IonLabel>
                 </IonButton>
+
+                <IonToast
+                message="Form submitted!"
+                isOpen={showToast}
+                onDidDismiss={() => setShowToast(false)}
+                duration={2000}
+                />
 
 
             </IonContent>
