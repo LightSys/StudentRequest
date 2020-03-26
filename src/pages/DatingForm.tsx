@@ -77,7 +77,7 @@ const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match })
 
         <IonItem lines="none"></IonItem>
 
-        <IonButton class="IonButton" expand="block" onClick={() => handleSubmit()} type="submit">
+        <IonButton class="IonButton" href="/home" expand="block" onClick={() => handleSubmit()} type="submit">
           <IonLabel class="font-size">Enviar</IonLabel>
         </IonButton>
 

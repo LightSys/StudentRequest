@@ -63,7 +63,7 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
 
                 <IonItem lines="none"></IonItem>
 
-                <IonButton class="IonButton" expand="block">
+                <IonButton class="IonButton" href="/home" expand="block">
                     <IonLabel class="font-size">Enviar</IonLabel>
                 </IonButton>
 

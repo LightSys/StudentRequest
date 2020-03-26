@@ -67,7 +67,7 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
 
         <IonItem lines="none" />
 
-        <IonButton class="IonButton" expand="block">
+        <IonButton class="IonButton" href="/home" expand="block">
           <IonLabel class="font-size">Enviar</IonLabel>
         </IonButton>
 
