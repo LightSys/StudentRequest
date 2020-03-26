@@ -1,12 +1,13 @@
 import { IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar,
-  IonInput, IonItem, IonLabel, IonRadioGroup, IonRadio, IonListHeader, IonTextarea, IonButton, IonBackButton } from '@ionic/react';
-import React from 'react';
+  IonInput, IonItem, IonLabel, IonRadioGroup, IonRadio, IonListHeader, IonTextarea, IonButton, IonBackButton, IonToast } from '@ionic/react';
+import React, {useState} from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Form.css';
 
 
 //Permission Form to Sleep Away From Campus(Dormir Fuera del Dormitorio)
 const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
+  const [showToast, setShowToast] = useState(false);
   return (
     <IonPage>
       <IonHeader>
@@ -67,9 +68,15 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
 
         <IonItem lines="none" />
 
-        <IonButton class="IonButton" expand="block">
+        <IonButton class="IonButton" expand="block" onClick={() => {setShowToast(true)}}>
           <IonLabel class="font-size">Enviar</IonLabel>
         </IonButton>
+        <IonToast
+        message="Form submitted!"
+        isOpen={showToast}
+        onDidDismiss={() => setShowToast(false)}
+        duration={2000}
+        />
 
       </IonContent>
     </IonPage>
