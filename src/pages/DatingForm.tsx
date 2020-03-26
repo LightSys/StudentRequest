@@ -1,11 +1,10 @@
 import { IonButtons, IonContent, IonHeader, IonPage, 
   IonTitle, IonToolbar, IonLabel,IonItem,IonInput, 
-  IonButton, IonBackButton, IonToast, IonAlert } from '@ionic/react';
+  IonButton, IonBackButton, IonAlert } from '@ionic/react';
 import React, {useState} from 'react';
-import { RouteComponentProps, Router } from 'react-router';
+import { RouteComponentProps} from 'react-router';
 import './Form.css';
 import "@ionic/react/css/core.css"
-import { stringify } from 'querystring';
 
 
 let hombre: string = "";

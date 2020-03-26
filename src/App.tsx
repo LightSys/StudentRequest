@@ -43,7 +43,7 @@ const App: React.FC = () => {
               setSelectedPage(props.match.params.name);
               return <Page {...props} />;
             }} exact={true} />
-            <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
+            <Route path="/" render={() => <Redirect to="/Login" />} exact={true} />
             <Route path="/home" component={Page} />
             <Route path="/Login" render={(props) => {
               setSelectedPage(props.match.params.name);
