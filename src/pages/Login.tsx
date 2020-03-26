@@ -28,8 +28,9 @@ const Login: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) => {
                         <IonInput class="IonInput" placeholder="Password"></IonInput>
                 </IonItem>
 
-
+                <IonItem lines ="none"></IonItem>
                 <IonButton href="/home" expand="block"><IonLabel>Sign In</IonLabel></IonButton>
+
             </IonContent>
 
         </IonPage>
