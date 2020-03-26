@@ -4,6 +4,38 @@ import React, {useState} from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Form.css';
 
+let nombre: string ="";
+let gender: string ="hombre";
+let email: string ="";
+let location: string ="";
+let reason: string ="";
+
+class OffCampusSubmission {
+  data: Array<any>;
+  constructor() {
+    this.data = [nombre, gender, email, location, reason]
+  }
+}
+
+function handleSubmit() {
+  let submission = new OffCampusSubmission();
+  console.log(submission.data);
+}
+function handleNombre(event: any) {
+  nombre = event.target.value;
+}
+function handleGender(event: any){
+  gender = event;
+}
+function handleEmail(event: any) {
+  email = event.target.value;
+}
+function handleLocation(event: any) {
+  location = event.target.value;
+}
+function handleReason(event: any) {
+  reason = event.target.value;
+}
 
 //Permission Form to Sleep Away From Campus(Dormir Fuera del Dormitorio)
 const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
@@ -32,10 +64,10 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
           <IonLabel class="padding" position="stacked">
             Nombre
           </IonLabel>
-          <IonInput class="IonInput" type="text" />
+          <IonInput class="IonInput" type="text" onInput={handleNombre} />
         </IonItem>
 
-        <IonRadioGroup value="hombre">
+        <IonRadioGroup value="hombre" onIonChange={e => handleGender(e.detail.value)}>
           <IonListHeader>
             <IonLabel class="padding" position="stacked">
               Gènero
@@ -53,22 +85,22 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
 
         <IonItem lines="none">
           <IonLabel class="padding"position="stacked">Email</IonLabel>
-          <IonInput class="IonInput" type="text" />
+          <IonInput class="IonInput" type="text" onInput={handleEmail} />
         </IonItem>
 
         <IonItem lines="none">
           <IonLabel class="padding"position="stacked">Donde?</IonLabel>
-          <IonInput class="IonInput" type="text" />
+          <IonInput class="IonInput" type="text" onInput={handleLocation} />
         </IonItem>
 
         <IonItem lines="none">
           <IonLabel class="padding"position="stacked">Razon</IonLabel>
-          <IonTextarea class="IonInput" />
+          <IonTextarea class="IonInput" onInput={handleReason}/>
         </IonItem>
 
         <IonItem lines="none" />
 
-        <IonButton class="IonButton" expand="block" href="/home" onClick={() => {setShowToast(true)}}>
+        <IonButton class="IonButton" expand="block" href ="/home" onClick={() => handleSubmit(); setShowToast(true} type="submit">
           <IonLabel class="font-size">Enviar</IonLabel>
         </IonButton>
         <IonToast
