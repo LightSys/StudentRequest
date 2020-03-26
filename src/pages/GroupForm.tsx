@@ -96,9 +96,10 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
                 <IonItem lines="none"></IonItem>
 
 
-                <IonButton class="IonButton" href="/home" expand="block" onClick={() => handleSubmit(); setShowToast(true} type = "submit">
+                <IonButton class="IonButton" href="/home" expand="block" onClick={() => {handleSubmit(); setShowToast(true)}} type = "submit">
                     <IonLabel class="font-size">Enviar</IonLabel>
                 </IonButton>
+                    
 
                 <IonToast
                 message="Form submitted!"

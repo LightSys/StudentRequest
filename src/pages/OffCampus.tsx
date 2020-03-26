@@ -100,7 +100,7 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
 
         <IonItem lines="none" />
 
-        <IonButton class="IonButton" expand="block" href ="/home" onClick={() => handleSubmit(); setShowToast(true} type="submit">
+        <IonButton class="IonButton" expand="block" href ="/home" onClick={() => {handleSubmit(); setShowToast(true)}} type="submit">
           <IonLabel class="font-size">Enviar</IonLabel>
         </IonButton>
         <IonToast
