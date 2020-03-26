@@ -15,7 +15,7 @@ let gender: string ="hombre";
 let email: string ="";
 let location: string ="";
 let reason: string ="";
-let leave: string= sampleTime;  
+let leaveTime: string= sampleTime;  
 let returnTime: string= sampleTime;
 
 
@@ -23,13 +23,18 @@ let returnTime: string= sampleTime;
 class OffCampusSubmission {
   data: Array<any>;
   constructor() {
-    this.data = [nombre, gender, email, leave, returnTime, location, reason]
+    this.data = [nombre, gender, email, leaveTime, returnTime, location, reason]
   }
 }
 
 function handleSubmit() {
   let submission = new OffCampusSubmission();
   console.log(submission.data);
+  nombre="";
+  gender="hombre";
+  email="";
+  location="";
+  reason="";
 }
 function handleNombre(event: any) {
   nombre = event.target.value;
@@ -41,7 +46,7 @@ function handleEmail(event: any) {
   email = event.target.value;
 }
 function handleLeave(event: any) {
-  leave = event;
+  leaveTime = event;
 }
 function handleReturn(event: any) {
   returnTime = event;
@@ -80,7 +85,7 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
           <IonLabel class="padding" position="stacked">
             Nombre
           </IonLabel>
-          <IonInput class="IonInput" type="text" onInput={handleNombre} />
+          <IonInput class="IonInput" value={nombre} type="text" onInput={handleNombre} />
         </IonItem>
 
         <IonRadioGroup value="hombre" onIonChange={e => handleGender(e.detail.value)}>
@@ -101,7 +106,7 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
 
         <IonItem lines="none">
           <IonLabel class="padding" position="stacked">Email</IonLabel>
-          <IonInput class="IonInput" type="text" onInput={handleEmail} />
+          <IonInput class="IonInput" value={email} type="text" onInput={handleEmail} />
         </IonItem>
 
         <IonItem lines="none">
@@ -116,17 +121,17 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
 
         <IonItem lines="none">
           <IonLabel class="padding"position="stacked">Donde?</IonLabel>
-          <IonInput class="IonInput" type="text" onInput={handleLocation} />
+          <IonInput class="IonInput" value={location} type="text" onInput={handleLocation} />
         </IonItem>
 
         <IonItem lines="none">
           <IonLabel class="padding"position="stacked">Razon</IonLabel>
-          <IonTextarea class="IonInput" onInput={handleReason}/>
+          <IonTextarea class="IonInput" value={reason} onInput={handleReason}/>
         </IonItem>
 
         <IonItem lines="none" />
 
-        <IonButton class="IonButton" expand="block" href ="/home" onClick={() => {handleSubmit(); setShowToast(true)}} type="submit">
+        <IonButton class="IonButton" expand="block" onClick={() => {handleSubmit(); setShowToast(true)}} type="submit">
           <IonLabel class="font-size">Enviar</IonLabel>
         </IonButton>
         <IonToast

@@ -12,21 +12,27 @@ let endyear = year + 1;
 let hombres: string = "";
 let mujeres: string = "";
 let email: string = "";
-let leave: string="";
-let returnTime: string= sampleTime;
-let location: string = sampleTime;
+let leaveTime: string = sampleTime;
+let returnTime: string = sampleTime;
+let location: string = "";
 let reason: string = "";
 
 class GroupSubmission {
     data: Array<string>;
     constructor() {
-        this.data = [hombres, mujeres, email,leave, returnTime, location, reason]
+        this.data = [hombres, mujeres, email,leaveTime, returnTime, location, reason]
     }
 }
 
 function handleSubmit(){
     let submission = new GroupSubmission();
     console.log(submission.data);
+    hombres="";
+    mujeres="";
+    email="";
+    location="";
+    reason="";
+
 }
 function handleHombres(event:any){
     hombres = event.target.value;
@@ -38,7 +44,7 @@ function handleEmail(event:any){
     email = event.target.value;
 }
 function handleLeave(event: any) {
-    leave = event;
+    leaveTime = event;
   }
 function handleReturn(event: any) {
     returnTime = event; 
@@ -76,21 +82,21 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
                     <IonLabel class="padding" position="stacked">
                         Nombres de Hombres
                     </IonLabel>
-                    <IonTextarea class="IonInput" placeholder="Nate Walter, Josh Wright, Joey Faas" onInput={handleHombres}></IonTextarea>
+                    <IonTextarea class="IonInput" placeholder="Nate Walter, Josh Wright, Joey Faas" value={hombres} onInput={handleHombres}></IonTextarea>
                 </IonItem>
 
                 <IonItem lines="none">
                     <IonLabel class="padding" position="stacked">
                         Nombres de Mujeres
                 </IonLabel>
-                    <IonTextarea class="IonInput" placeholder="Natalie Walter, Jessica Wright, Josephina Faas" onInput={handleMujeres}></IonTextarea>
+                    <IonTextarea class="IonInput" placeholder="Natalie Walter, Jessica Wright, Josephina Faas" value={mujeres} onInput={handleMujeres}></IonTextarea>
                 </IonItem>
 
                 <IonItem lines="none">
                     <IonLabel class="padding" position="stacked">
                         Email
                 </IonLabel>
-                    <IonInput class="IonInput" placeholder="email@riogrande.edu" onInput={handleEmail}></IonInput>
+                    <IonInput class="IonInput" placeholder="email@riogrande.edu" value={email} onInput={handleEmail}></IonInput>
                 </IonItem>
 
                 <IonItem lines="none">
@@ -107,20 +113,20 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
                     <IonLabel class="padding" position="stacked">
                         Donde?
                 </IonLabel>
-                    <IonInput class="IonInput" placeholder=" A donde van?" onInput={handleLocation}></IonInput>
+                    <IonInput class="IonInput" placeholder=" A donde van?" value={location} onInput={handleLocation}></IonInput>
                 </IonItem>
 
                 <IonItem lines="none">
                     <IonLabel class="padding" position="stacked">
                         Reason
                 </IonLabel>
-                    <IonTextarea class="IonInput" placeholder="razon para salir" onInput={handleReason}></IonTextarea>
+                    <IonTextarea class="IonInput" placeholder="razon para salir" value={reason} onInput={handleReason}></IonTextarea>
                 </IonItem>
 
                 <IonItem lines="none"></IonItem>
 
 
-                <IonButton class="IonButton" href="/home" expand="block" onClick={() => {handleSubmit(); setShowToast(true)}} type = "submit">
+                <IonButton class="IonButton" expand="block" onClick={() => {handleSubmit(); setShowToast(true)}} type = "submit">
                     <IonLabel class="font-size">Enviar</IonLabel>
                 </IonButton>
                     
