@@ -1,4 +1,4 @@
-import { IonItem, IonButtons, IonLabel, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonTextarea, IonButton, IonInput, IonBackButton, IonToast } from '@ionic/react';
+import { IonItem, IonButtons, IonLabel, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonTextarea, IonButton, IonInput,IonDatetime, IonBackButton, IonToast } from '@ionic/react';
 import React, {useState} from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Form.css';
@@ -6,13 +6,15 @@ import './Form.css';
 let hombres: string = "";
 let mujeres: string = "";
 let email: string = "";
+let leave: string="";
+let returnTime: string="";
 let location: string = "";
 let reason: string = "";
 
 class GroupSubmission {
     data: Array<string>;
     constructor() {
-        this.data = [hombres, mujeres, email, location, reason]
+        this.data = [hombres, mujeres, email,leave, returnTime, location, reason]
     }
 }
 
@@ -29,6 +31,12 @@ function handleMujeres(event:any){
 function handleEmail(event:any){
     email = event.target.value;
 }
+function handleLeave(event: any) {
+    leave = event;
+  }
+function handleReturn(event: any) {
+    returnTime = event; 
+  }
 function handleLocation(event:any){
     location = event.target.value;
 }
@@ -77,6 +85,16 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
                         Email
                 </IonLabel>
                     <IonInput class="IonInput" placeholder="email@riogrande.edu" onInput={handleEmail}></IonInput>
+                </IonItem>
+
+                <IonItem lines="none">
+                    <IonLabel class="padding" position="stacked">Date When Leave</IonLabel>
+                        <IonDatetime displayFormat="MMM DD, YYYY HH:mm" min="2020" max="2022" value = "Mar 26, 2020 2:11" onIonChange={e => handleLeave(e.detail.value)}></IonDatetime>
+                </IonItem>
+
+                <IonItem lines="none">
+                    <IonLabel class="padding" position="stacked">Date When Back</IonLabel>
+                        <IonDatetime displayFormat="MMM DD, YYYY HH:mm" min = "2020"  max="2022" value = "Mar 26, 2020 2:11" onIonChange={e => handleReturn(e.detail.value)}></IonDatetime>
                 </IonItem>
 
                 <IonItem lines="none">
