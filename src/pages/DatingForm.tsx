@@ -1,9 +1,10 @@
-import { IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonLabel,IonItem,IonInput, IonButton, IonBackButton, IonToast } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonPage, 
+  IonTitle, IonToolbar, IonLabel,IonItem,IonInput, 
+  IonButton, IonBackButton, IonAlert } from '@ionic/react';
 import React, {useState} from 'react';
-import { RouteComponentProps } from 'react-router';
+import { RouteComponentProps} from 'react-router';
 import './Form.css';
 import "@ionic/react/css/core.css"
-
 
 
 let hombre: string = "";
@@ -18,8 +19,10 @@ class DatingSubmission {
 }
 
 function handleSubmit() {
+
   let submission = new DatingSubmission();
   console.log(submission.data);
+  
 }
 
 function handleHombre(event: any) {
@@ -79,15 +82,15 @@ const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match })
 
         <IonItem lines="none"></IonItem>
 
-        <IonButton class="IonButton" href="/home" expand="block" onClick={() => {handleSubmit(); setShowToast(true)}} type="submit">
+        <IonButton class="IonButton" expand="block" onClick={() => {setShowToast(true); handleSubmit()}} type="submit">
           <IonLabel class="font-size">Enviar</IonLabel>
         </IonButton>
-
-        <IonToast
-          message="Form submitted!"
+        
+        <IonAlert
           isOpen={showToast}
           onDidDismiss={() => setShowToast(false)}
-          duration={2000}
+          message="Request Submitted"
+          buttons={['ok']}
         />
 
       </IonContent>

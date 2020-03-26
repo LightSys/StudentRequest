@@ -61,7 +61,7 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
                 <IonItem lines="none">
                     <IonLabel class="padding" position="stacked">
                         Nombres de Hombres
-                </IonLabel>
+                    </IonLabel>
                     <IonTextarea class="IonInput" placeholder="Nate Walter, Josh Wright, Joey Faas" onInput={handleHombres}></IonTextarea>
                 </IonItem>
 
