@@ -10,6 +10,7 @@ import "@ionic/react/css/core.css"
 let hombre: string = "";
 let mujer: string = "";
 let email: string = "";
+let message: string = "";
 
 class DatingSubmission {
   data: Array<string>;
@@ -19,12 +20,17 @@ class DatingSubmission {
 }
 
 function handleSubmit() {
-
-  let submission = new DatingSubmission();
-  console.log(submission.data);
-  hombre="";
-  mujer="";
-  email="";
+  if(hombre==="" || mujer==="" || email === ""){
+    message = "Fill All Required Fields"     
+  } else {
+    
+    let submission = new DatingSubmission();
+    console.log(submission.data);
+    hombre="";
+    mujer="";
+    email="";
+    message = "Form Submitted"
+  }
   
 }
 
@@ -64,37 +70,37 @@ const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match })
 
         <IonItem lines="none">
           <IonLabel class="padding" position="stacked" >
-              Nombre de Hombre
+              Nombre de Hombre *
           </IonLabel>
           <IonInput class="IonInput" type="text" value={hombre} onInput={handleHombre} />
         </IonItem>
 
         <IonItem lines="none">
             <IonLabel class="padding" position="stacked">
-              Nombre de Mujer
+              Nombre de Mujer *
           </IonLabel>
           <IonInput class="IonInput" type="text" value={mujer} onInput={handleMujer} />
         </IonItem>
 
         <IonItem lines="none">
             <IonLabel class="padding" position="stacked">
-              Email
+              Email *
           </IonLabel>
           <IonInput class="IonInput" type="email" value={email} onInput={handleEmail} />
         </IonItem>
 
         <IonItem lines="none"></IonItem>
 
-        <IonButton class="IonButton" expand="block" onClick={() => {setShowToast(true); handleSubmit()}} type="submit">
+        <IonButton class="IonButton" expand="block" onClick={() => {handleSubmit(); setShowToast(true) }} type="submit">
           <IonLabel class="font-size">Enviar</IonLabel>
         </IonButton>
         
         <IonToast
-          message="Form submitted!"
+          message= {message}
           isOpen={showToast}
           onDidDismiss={() => setShowToast(false)}
           duration={2000}
-        />
+          />
 
       </IonContent>
     </IonPage>

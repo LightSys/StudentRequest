@@ -17,6 +17,7 @@ let location: string ="";
 let reason: string ="";
 let leaveTime: string= sampleTime;  
 let returnTime: string= sampleTime;
+let message: string = "";
 
 
 
@@ -28,13 +29,21 @@ class OffCampusSubmission {
 }
 
 function handleSubmit() {
-  let submission = new OffCampusSubmission();
-  console.log(submission.data);
-  nombre="";
-  gender="hombre";
-  email="";
-  location="";
-  reason="";
+  if (nombre ==="" || email ==="" ||
+      location ==="" || reason ==="" || leaveTime === sampleTime ||
+      returnTime === sampleTime){
+      message = "Fill All Required Fields" 
+  } else {
+    let submission = new OffCampusSubmission();
+    console.log(submission.data);
+    nombre="";
+    gender="hombre";
+    email="";
+    location="";
+    reason="";
+    message="Form Submitted";
+  }
+
 }
 function handleNombre(event: any) {
   nombre = event.target.value;
@@ -135,7 +144,7 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
           <IonLabel class="font-size">Enviar</IonLabel>
         </IonButton>
         <IonToast
-        message="Form submitted!"
+        message={message}
         isOpen={showToast}
         onDidDismiss={() => setShowToast(false)}
         duration={2000}

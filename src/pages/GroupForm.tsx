@@ -16,6 +16,7 @@ let leaveTime: string = sampleTime;
 let returnTime: string = sampleTime;
 let location: string = "";
 let reason: string = "";
+let message: string = "";
 
 class GroupSubmission {
     data: Array<string>;
@@ -25,13 +26,21 @@ class GroupSubmission {
 }
 
 function handleSubmit(){
-    let submission = new GroupSubmission();
-    console.log(submission.data);
-    hombres="";
-    mujeres="";
-    email="";
-    location="";
-    reason="";
+    if(hombres==="" || mujeres==="" || email==="" ||
+        location==="" || reason ==="" || 
+        leaveTime===sampleTime || returnTime===sampleTime){
+        message= "Fill All Required Fields"
+    } else {
+        let submission = new GroupSubmission();
+        console.log(submission.data);
+        hombres="";
+        mujeres="";
+        email="";
+        location="";
+        reason="";
+        message="Form Submitted"
+    }
+
 
 }
 function handleHombres(event:any){
@@ -132,7 +141,7 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
                     
 
                 <IonToast
-                message="Form submitted!"
+                message={message}
                 isOpen={showToast}
                 onDidDismiss={() => setShowToast(false)}
                 duration={2000}
