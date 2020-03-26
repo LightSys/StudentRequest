@@ -1,7 +1,7 @@
 import { RouteComponentProps } from "react-router";
 import React from 'react';
 import { IonHeader, IonToolbar, IonTitle, IonPage, IonLabel, IonItem, IonInput, IonContent, IonButton} from '@ionic/react';
-import './Login.css'
+import './Form.css'
 
 const Login: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) => {
     return (
