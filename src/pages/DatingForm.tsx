@@ -1,6 +1,6 @@
 import { IonButtons, IonContent, IonHeader, IonPage, 
   IonTitle, IonToolbar, IonLabel,IonItem,IonInput, 
-  IonButton, IonBackButton, IonAlert } from '@ionic/react';
+  IonButton, IonBackButton, IonToast } from '@ionic/react';
 import React, {useState} from 'react';
 import { RouteComponentProps} from 'react-router';
 import './Form.css';
@@ -22,6 +22,9 @@ function handleSubmit() {
 
   let submission = new DatingSubmission();
   console.log(submission.data);
+  hombre="";
+  mujer="";
+  email="";
   
 }
 
@@ -63,21 +66,21 @@ const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match })
           <IonLabel class="padding" position="stacked" >
               Nombre de Hombre
           </IonLabel>
-          <IonInput class="IonInput" type="text" onInput={handleHombre} />
+          <IonInput class="IonInput" type="text" value={hombre} onInput={handleHombre} />
         </IonItem>
 
         <IonItem lines="none">
             <IonLabel class="padding" position="stacked">
               Nombre de Mujer
           </IonLabel>
-          <IonInput class="IonInput" type="text" onInput={handleMujer} />
+          <IonInput class="IonInput" type="text" value={mujer} onInput={handleMujer} />
         </IonItem>
 
         <IonItem lines="none">
             <IonLabel class="padding" position="stacked">
               Email
           </IonLabel>
-          <IonInput class="IonInput" type="email" onInput={handleEmail} />
+          <IonInput class="IonInput" type="email" value={email} onInput={handleEmail} />
         </IonItem>
 
         <IonItem lines="none"></IonItem>
@@ -86,11 +89,11 @@ const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match })
           <IonLabel class="font-size">Enviar</IonLabel>
         </IonButton>
         
-        <IonAlert
+        <IonToast
+          message="Form submitted!"
           isOpen={showToast}
           onDidDismiss={() => setShowToast(false)}
-          message="Request Submitted"
-          buttons={['ok']}
+          duration={2000}
         />
 
       </IonContent>
