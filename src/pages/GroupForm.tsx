@@ -3,12 +3,18 @@ import React, {useState} from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Form.css';
 
+
+let today = new Date();
+let year = today.getFullYear();
+let sampleTime = "Jan 1, " + year.toString() + " 12:00"; 
+let endyear = year + 1;
+
 let hombres: string = "";
 let mujeres: string = "";
 let email: string = "";
 let leave: string="";
-let returnTime: string="";
-let location: string = "";
+let returnTime: string= sampleTime;
+let location: string = sampleTime;
 let reason: string = "";
 
 class GroupSubmission {
@@ -89,12 +95,12 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
 
                 <IonItem lines="none">
                     <IonLabel class="padding" position="stacked">Date When Leave</IonLabel>
-                        <IonDatetime displayFormat="MMM DD, YYYY HH:mm" min="2020" max="2022" value = "Mar 26, 2020 2:11" onIonChange={e => handleLeave(e.detail.value)}></IonDatetime>
+                        <IonDatetime displayFormat="MMM DD, YYYY HH:mm" min = {year.toString()} max = {endyear.toString()} value = {sampleTime} onIonChange={e => handleLeave(e.detail.value)}></IonDatetime>
                 </IonItem>
 
                 <IonItem lines="none">
                     <IonLabel class="padding" position="stacked">Date When Back</IonLabel>
-                        <IonDatetime displayFormat="MMM DD, YYYY HH:mm" min = "2020"  max="2022" value = "Mar 26, 2020 2:11" onIonChange={e => handleReturn(e.detail.value)}></IonDatetime>
+                        <IonDatetime displayFormat="MMM DD, YYYY HH:mm" min = {year.toString()}  max= {endyear.toString()} value = {sampleTime} onIonChange={e => handleReturn(e.detail.value)}></IonDatetime>
                 </IonItem>
 
                 <IonItem lines="none">
