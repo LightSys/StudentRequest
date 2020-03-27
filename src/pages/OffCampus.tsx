@@ -1,5 +1,5 @@
 import { IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar,
-  IonInput, IonItem, IonLabel, IonRadioGroup, IonRadio, IonListHeader, 
+  IonInput, IonItem, IonLabel, IonRadioGroup, IonRadio, 
   IonTextarea, IonButton, IonBackButton, IonToast, IonDatetime } from '@ionic/react';
 import React, {useState} from 'react';
 import { RouteComponentProps } from 'react-router';
@@ -140,19 +140,19 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
           A radio group tag used to select if they are mail or female
         */}
         <IonRadioGroup value="hombre" onIonChange={e => handleGender(e.detail.value)}>
-          <IonListHeader>
-            <IonLabel class="padding" position="stacked">
-              Gènero *
-            </IonLabel>
-          </IonListHeader>
-          <IonItem lines="none">
-            <IonLabel>Hombre </IonLabel>
-            <IonRadio slot="start" value="hombre"></IonRadio>
-          </IonItem>
-          <IonItem lines="none">
-            <IonLabel>Mujer </IonLabel>
-            <IonRadio slot="start" value="mujer"></IonRadio>
-          </IonItem>
+            <IonItem lines="none">
+              <IonLabel class="padding" position="stacked">
+                Gènero *
+              </IonLabel>
+            </IonItem>
+            <IonItem lines="none"> 
+              <IonLabel>Hombre </IonLabel>
+              <IonRadio slot="start" value="hombre"></IonRadio>
+            </IonItem>
+            <IonItem lines="none">
+              <IonLabel>Mujer </IonLabel>
+              <IonRadio slot="start" value="mujer"></IonRadio>
+            </IonItem>
         </IonRadioGroup>
 
         <IonItem lines="none">
