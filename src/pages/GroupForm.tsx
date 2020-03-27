@@ -16,6 +16,7 @@ let leaveTime: string = sampleTime;
 let returnTime: string = sampleTime;
 let location: string = "";
 let reason: string = "";
+let message: string = "";
 
 class GroupSubmission {
     data: Array<string>;
@@ -25,13 +26,21 @@ class GroupSubmission {
 }
 
 function handleSubmit(){
-    let submission = new GroupSubmission();
-    console.log(submission.data);
-    hombres="";
-    mujeres="";
-    email="";
-    location="";
-    reason="";
+    if(hombres==="" || mujeres==="" || email==="" ||
+        location==="" || reason ==="" || 
+        leaveTime===sampleTime || returnTime===sampleTime){
+        message= "Fill All Required Fields"
+    } else {
+        let submission = new GroupSubmission();
+        console.log(submission.data);
+        hombres="";
+        mujeres="";
+        email="";
+        location="";
+        reason="";
+        message="Form Submitted"
+    }
+
 
 }
 function handleHombres(event:any){
@@ -80,45 +89,45 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
                 {/* Form Inputs and Labels - List of Men, Women, Email, and then Reason */}
                 <IonItem lines="none">
                     <IonLabel class="padding" position="stacked">
-                        Nombres de Hombres
+                        Nombres de Hombres *
                     </IonLabel>
                     <IonTextarea class="IonInput" placeholder="Nate Walter, Josh Wright, Joey Faas" value={hombres} onInput={handleHombres}></IonTextarea>
                 </IonItem>
 
                 <IonItem lines="none">
                     <IonLabel class="padding" position="stacked">
-                        Nombres de Mujeres
+                        Nombres de Mujeres *
                 </IonLabel>
                     <IonTextarea class="IonInput" placeholder="Natalie Walter, Jessica Wright, Josephina Faas" value={mujeres} onInput={handleMujeres}></IonTextarea>
                 </IonItem>
 
                 <IonItem lines="none">
                     <IonLabel class="padding" position="stacked">
-                        Email
+                        Email *
                 </IonLabel>
                     <IonInput class="IonInput" placeholder="email@riogrande.edu" value={email} onInput={handleEmail}></IonInput>
                 </IonItem>
 
                 <IonItem lines="none">
-                    <IonLabel class="padding" position="stacked">Date When Leave</IonLabel>
+                    <IonLabel class="padding" position="stacked">Hora de Salida *</IonLabel>
                         <IonDatetime displayFormat="MMM DD, YYYY HH:mm" min = {year.toString()} max = {endyear.toString()} value = {sampleTime} onIonChange={e => handleLeave(e.detail.value)}></IonDatetime>
                 </IonItem>
 
                 <IonItem lines="none">
-                    <IonLabel class="padding" position="stacked">Date When Back</IonLabel>
+                    <IonLabel class="padding" position="stacked">Hora de Regreso *</IonLabel>
                         <IonDatetime displayFormat="MMM DD, YYYY HH:mm" min = {year.toString()}  max= {endyear.toString()} value = {sampleTime} onIonChange={e => handleReturn(e.detail.value)}></IonDatetime>
                 </IonItem>
 
                 <IonItem lines="none">
                     <IonLabel class="padding" position="stacked">
-                        Donde?
+                        ¿Dónde? *
                 </IonLabel>
                     <IonInput class="IonInput" placeholder=" A donde van?" value={location} onInput={handleLocation}></IonInput>
                 </IonItem>
 
                 <IonItem lines="none">
                     <IonLabel class="padding" position="stacked">
-                        Reason
+                        Razon *
                 </IonLabel>
                     <IonTextarea class="IonInput" placeholder="razon para salir" value={reason} onInput={handleReason}></IonTextarea>
                 </IonItem>
@@ -132,7 +141,7 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
                     
 
                 <IonToast
-                message="Form submitted!"
+                message={message}
                 isOpen={showToast}
                 onDidDismiss={() => setShowToast(false)}
                 duration={2000}
