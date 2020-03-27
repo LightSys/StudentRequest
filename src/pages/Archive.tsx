@@ -22,7 +22,7 @@ const Archive: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) => {
                         <IonCol>
                             <IonCard class="archive" button href = {thing[2]}>
                                 <IonCardHeader>
-                                    <IonCardTitle color = "danger">{thing[1]}</IonCardTitle>
+                                    <IonCardTitle id = "archiveTitle" color = "danger">{thing[1]}</IonCardTitle>
                                 </IonCardHeader>
                                 <IonCardContent>
                                     <ul>

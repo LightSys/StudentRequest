@@ -1,7 +1,7 @@
 import { RouteComponentProps } from "react-router";
 import React from 'react';
 import {folderOutline} from 'ionicons/icons'
-import { IonHeader,IonItem, IonToolbar, IonTitle,IonButton, IonPage, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardContent, IonCardTitle, IonIcon} from '@ionic/react';
+import { IonHeader,IonItem, IonContent, IonToolbar, IonTitle,IonButton, IonPage, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardContent, IonCardTitle, IonIcon} from '@ionic/react';
 import './Form.css'
 
 let testList: Array<Array<string>> = [["Permiso de Pareja", "marcos@riogrande.edu", "/requests/0"], ["Permiso de dormir afuera", "carlos@riogrande.edu", "/requests/1"],
@@ -25,22 +25,25 @@ const AdminHome: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) =>
             <IonItem lines = "full" >
                 <IonTitle class = "AdminHome">Incoming Requests</IonTitle>
             </IonItem>
-            <IonGrid>
-            {testList.map(thing => (
-                <IonRow>
-                    <IonCol>
-                        <IonCard button href = {thing[2]}>
-                            <IonCardHeader>
-                                <IonCardTitle color = "danger">{thing[0]}</IonCardTitle>
-                            </IonCardHeader>
-                            
-                            <IonCardContent>{thing[1]}</IonCardContent>
 
-                        </IonCard>
-                    </IonCol>
-                </IonRow>
-            ))}
+            <IonContent>
+                <IonGrid>
+                {testList.map(thing => (
+                    <IonRow>
+                        <IonCol>
+                            <IonCard button href = {thing[2]}>
+                                <IonCardHeader>
+                                    <IonCardTitle color = "danger">{thing[0]}</IonCardTitle>
+                                </IonCardHeader>
+                                
+                                <IonCardContent>{thing[1]}</IonCardContent>
+
+                            </IonCard>
+                        </IonCol>
+                    </IonRow>
+                ))}
             </IonGrid>
+            </IonContent>
             
                 
             
