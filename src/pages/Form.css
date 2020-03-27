@@ -14,14 +14,6 @@ ion-content ion-toolbar {
   padding-bottom: 1.25em !important;
 }
 
-/*
-  css class for the admin page. 
-*/
-.AdminHome {
-  padding-top: 1em;
-  padding-bottom: .25em;
-  font-size: 28px;
-}
 
 /*
   IonLabel class that formats input boxes

@@ -26,13 +26,10 @@ const AdminHome: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) =>
                         <IonButton href ='/Archive'>
                             <IonIcon icon ={folderOutline} item-left></IonIcon>
                         </IonButton>
-                        <IonTitle>Archive</IonTitle>
+                        <IonTitle>Incoming Requests</IonTitle>
                     </IonItem>
                 </IonToolbar>
             </IonHeader>
-            <IonItem lines = "full" >
-                <IonTitle class = "AdminHome">Incoming Requests</IonTitle>
-            </IonItem>
 
             {/* 
                 Mapped items for current requests data.
