@@ -63,13 +63,13 @@ const Login: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) => {
                         </IonLabel>
                         <IonInput class="IonInput" placeholder="Password" type="password" onInput={handlePassword}></IonInput>
                 </IonItem>
-
-                {/* 
-                 Submit button, takes in an onClick handler to process handleSubmit()
-                */}
                 <IonItem lines ="none"></IonItem>
-                <IonButton href="/home" expand="block" onClick={() => {handleSubmit()}}><IonLabel>Iniciar Sesión</IonLabel></IonButton>
+                <IonButton href="/home" expand="block" onClick={() => {handleSubmit()}}><IonLabel>Sign In</IonLabel></IonButton>
+                <IonButton href="/AdminHome" expand="block" onClick={() => {handleSubmit()}}><IonLabel>Admin</IonLabel></IonButton>
+
+
             </IonContent>
+        
 
         </IonPage>
     );

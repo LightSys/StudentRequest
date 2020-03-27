@@ -133,21 +133,21 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
                     <IonLabel class="padding" position="stacked">
                         Nombres de Hombres *
                     </IonLabel>
-                    <IonTextarea class="IonInput" placeholder="Nate Walter, Josh Wright, Joey Faas" value={hombres} onInput={handleHombres}></IonTextarea>
+                    <IonTextarea class="IonInput"  value={hombres} onInput={handleHombres}></IonTextarea>
                 </IonItem>
 
                 <IonItem lines="none">
                     <IonLabel class="padding" position="stacked">
                         Nombres de Mujeres *
                 </IonLabel>
-                    <IonTextarea class="IonInput" placeholder="Natalie Walter, Jessica Wright, Josephina Faas" value={mujeres} onInput={handleMujeres}></IonTextarea>
+                    <IonTextarea class="IonInput" value={mujeres} onInput={handleMujeres}></IonTextarea>
                 </IonItem>
 
                 <IonItem lines="none">
                     <IonLabel class="padding" position="stacked">
                         Email *
                 </IonLabel>
-                    <IonInput class="IonInput" placeholder="email@riogrande.edu" value={email} onInput={handleEmail}></IonInput>
+                    <IonInput class="IonInput" value={email} onInput={handleEmail}></IonInput>
                 </IonItem>
 
                 {/*
@@ -167,14 +167,14 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
                     <IonLabel class="padding" position="stacked">
                         ¿Dónde? *
                 </IonLabel>
-                    <IonInput class="IonInput" placeholder=" A donde van?" value={location} onInput={handleLocation}></IonInput>
+                    <IonInput class="IonInput" value={location} onInput={handleLocation}></IonInput>
                 </IonItem>
 
                 <IonItem lines="none">
                     <IonLabel class="padding" position="stacked">
                         Razon *
                 </IonLabel>
-                    <IonTextarea class="IonInput" placeholder="razon para salir" value={reason} onInput={handleReason}></IonTextarea>
+                    <IonTextarea class="IonInput" value={reason} onInput={handleReason}></IonTextarea>
                 </IonItem>
 
                 <IonItem lines="none"></IonItem>
