@@ -5,7 +5,12 @@ import './Form.css'
 
 
 
-
+/* 
+todos:
+    * Implements a backend that pulls all necessary data that includes, but not limited
+    to name, email, and reason and a time a stamp.
+    * Add buttons that either denies or accepts the request * See wiki for more details* 
+*/ 
 const Request: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) => {
     return (
    
