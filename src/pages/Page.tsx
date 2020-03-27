@@ -1,4 +1,4 @@
-import { IonButtons, IonButton, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonGrid, IonRow, IonCol } from '@ionic/react';
+import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonGrid, IonRow, IonCol } from '@ionic/react';
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Form.css';
@@ -12,20 +12,11 @@ const Page: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
           <IonTitle>Hola, Bienvenidos!</IonTitle>
         </IonToolbar>
       </IonHeader>
 
       <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">{ match.params.name }</IonTitle>
-            <IonTitle size="small"></IonTitle>
-          </IonToolbar>
-        </IonHeader>
         
         <IonGrid>
           <IonRow>
