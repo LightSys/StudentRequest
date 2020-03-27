@@ -92,7 +92,7 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
 {/* Form Inputs and Labels - Name, Gender Selection, Email */}
         <IonItem lines="none">
           <IonLabel class="padding" position="stacked">
-            Nombre
+            Nombre *
           </IonLabel>
           <IonInput class="IonInput" value={nombre} type="text" onInput={handleNombre} />
         </IonItem>
@@ -100,15 +100,15 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
         <IonRadioGroup value="hombre" onIonChange={e => handleGender(e.detail.value)}>
           <IonListHeader>
             <IonLabel class="padding" position="stacked">
-              Gènero
+              Gènero *
             </IonLabel>
           </IonListHeader>
           <IonItem lines="none">
-            <IonLabel>Hombre</IonLabel>
+            <IonLabel>Hombre </IonLabel>
             <IonRadio slot="start" value="hombre"></IonRadio>
           </IonItem>
           <IonItem lines="none">
-            <IonLabel>Mujer</IonLabel>
+            <IonLabel>Mujer </IonLabel>
             <IonRadio slot="start" value="mujer"></IonRadio>
           </IonItem>
         </IonRadioGroup>
@@ -119,22 +119,22 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
         </IonItem>
 
         <IonItem lines="none">
-          <IonLabel class="padding" position="stacked">Date When Leave</IonLabel>
+          <IonLabel class="padding" position="stacked">Hora de Salida *</IonLabel>
           <IonDatetime displayFormat="MMM DD, YYYY HH:mm" min = {year.toString()} max= {endyear.toString()} value = {sampleTime} onIonChange={e => handleLeave(e.detail.value)}></IonDatetime>
         </IonItem>
 
         <IonItem lines="none">
-          <IonLabel class="padding" position="stacked">Date When Back</IonLabel>
+          <IonLabel class="padding" position="stacked">Hora de Regreso *</IonLabel>
           <IonDatetime displayFormat="MMM DD, YYYY HH:mm" min = {year.toString()}  max= {endyear.toString()} value = {sampleTime} onIonChange={e => handleReturn(e.detail.value)}></IonDatetime>
         </IonItem>
 
         <IonItem lines="none">
-          <IonLabel class="padding"position="stacked">Donde?</IonLabel>
+          <IonLabel class="padding"position="stacked">¿Dónde? *</IonLabel>
           <IonInput class="IonInput" value={location} type="text" onInput={handleLocation} />
         </IonItem>
 
         <IonItem lines="none">
-          <IonLabel class="padding"position="stacked">Razon</IonLabel>
+          <IonLabel class="padding"position="stacked">Razon *</IonLabel>
           <IonTextarea class="IonInput" value={reason} onInput={handleReason}/>
         </IonItem>
 

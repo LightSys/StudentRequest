@@ -45,7 +45,6 @@ const Login: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) => {
 
                 <IonItem lines ="none"></IonItem>
                 <IonButton href="/home" expand="block" onClick={() => {handleSubmit()}}><IonLabel>Sign In</IonLabel></IonButton>
-
             </IonContent>
 
         </IonPage>
