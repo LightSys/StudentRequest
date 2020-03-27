@@ -14,14 +14,6 @@ ion-content ion-toolbar {
   padding-bottom: 1.25em !important;
 }
 
-/*
-  css class for the admin page. 
-*/
-.AdminHome {
-  padding-top: 1em;
-  padding-bottom: .25em;
-  font-size: 28px;
-}
 
 /*
   IonLabel class that formats input boxes
@@ -37,7 +29,7 @@ ion-content ion-toolbar {
 }
 
 .archiveTitle {
-  font-size: 25px !important;
+  font-size: large !important;
 }
 
 /*
@@ -64,5 +56,12 @@ ion-label.label {
 */
 .font-size {
     font-size: 18px !important;
+}
+
+/*
+  adjust font size so text will fit the label
+*/
+.small-font {
+  font-size: 14.5px !important;
 }
 

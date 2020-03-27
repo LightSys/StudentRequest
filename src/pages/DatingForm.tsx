@@ -98,16 +98,12 @@ const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match })
           <IonButtons slot="start">
             <IonBackButton defaultHref="/home" />
           </IonButtons>
-          <IonTitle>Permiso de Parejas Oficiales</IonTitle>
+          <IonTitle>Parejas Oficiales</IonTitle>
         </IonToolbar>
       </IonHeader>
 
       <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">{ match.params.name }</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+
 
       {/*
         Below are the html for the entry boxes for all data.

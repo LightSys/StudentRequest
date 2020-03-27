@@ -1,4 +1,4 @@
-import { IonButtons, IonButton, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonGrid, IonRow, IonCol } from '@ionic/react';
+import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonGrid, IonRow, IonCol } from '@ionic/react';
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Form.css';
@@ -6,26 +6,17 @@ import './Form.css';
 
 
 const Page: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
-  // This page directs users to all the forms they wish to use
+  // This page directs users to all the forms they wish to use --STUDENT HOME PAGE--
   // Author: @njw32
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
           <IonTitle>Hola, Bienvenidos!</IonTitle>
         </IonToolbar>
       </IonHeader>
 
       <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">{ match.params.name }</IonTitle>
-            <IonTitle size="small"></IonTitle>
-          </IonToolbar>
-        </IonHeader>
         
         <IonGrid>
           <IonRow>
@@ -36,7 +27,7 @@ const Page: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
 
           <IonRow>
             <IonCol>
-              <IonButton expand="block" href="/offcampus"><IonLabel class="font-size">Dormir Fuera</IonLabel></IonButton>
+              <IonButton expand="block" href="/offcampus"><IonLabel class="font-size">Permiso Para Dormir Fuera</IonLabel></IonButton>
             </IonCol>
           </IonRow>
 
