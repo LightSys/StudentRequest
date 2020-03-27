@@ -27,6 +27,10 @@ import './theme/variables.css';
 import OffCampus from './pages/OffCampus';
 import GroupForm from './pages/GroupForm';
 import DatingForm from './pages/DatingForm';
+import Login from './pages/Login';
+import AdminHome from './pages/AdminHome';
+import Archive from './pages/Archive';
+import Request from './pages/Request';
 
 const App: React.FC = () => {
 
@@ -43,8 +47,24 @@ const App: React.FC = () => {
               setSelectedPage(props.match.params.name);
               return <Page {...props} />;
             }} exact={true} />
-            <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
+            <Route path="/" render={() => <Redirect to="/Login" />} exact={true} />
             <Route path="/home" component={Page} />
+            <Route path="/AdminHome" render={(props) => {
+              setSelectedPage(props.match.params.name);
+              return <AdminHome {...props} />;
+              }} exact={true} />
+            <Route path="/Request/:id" render={(props) => {
+            setSelectedPage(props.match.params.name);
+            return <Request {...props} />;
+            }} exact={true} />
+            <Route path="/Login" render={(props) => {
+              setSelectedPage(props.match.params.name);
+              return <Login {...props} />;
+              }} exact={true} />
+            <Route path="/Archive" render={(props) => {
+            setSelectedPage(props.match.params.name);
+            return <Archive {...props} />;
+            }} exact={true} />
             <Route path="/DatingForm" render={(props) => {
               setSelectedPage(props.match.params.name);
               return <DatingForm {...props} />;

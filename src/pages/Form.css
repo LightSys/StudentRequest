@@ -1,12 +1,33 @@
+/*
+  Initial css class set up by ionic
+*/
 ion-content ion-toolbar {
     --background: transparent;
   }
 
+/*
+  padding class used for IonLabels. Using !important so that 
+  the changes are accessed globally
+*/
 .padding {
   font-size: 25px !important;
   padding-bottom: 1.25em !important;
 }
 
+/*
+  css class for the admin page. 
+*/
+.AdminHome {
+  padding-top: 1em;
+  padding-bottom: .25em;
+  font-size: 28px;
+}
+
+/*
+  IonLabel class that formats input boxes
+  as well as changing the text color and background 
+  to make the changes more notice able.
+*/
 .IonInput {
   --padding-top: 5px !important;
   padding-left: 10px !important;
@@ -15,12 +36,22 @@ ion-content ion-toolbar {
   border-radius: 0px !important;
 }
 
+.archiveTitle {
+  font-size: 25px !important;
+}
+
+/*
+  IonButton class to format and unify the submit buttons
+*/
 .IonButton{
   --padding-end: 0em !important;
   --padding-bottom: 2em !important;
   --padding-top: 2em !important;
 }
 
+/*
+  CSS class to change and format all the texts in an ionlabel tag.
+*/
 ion-label.label {
     font-size: 30px !important; 
     font-style: normal !important;
@@ -28,6 +59,9 @@ ion-label.label {
     
 }
 
+/*
+  Class used to unify font size within labels and buttons if needed.
+*/
 .font-size {
     font-size: 18px !important;
 }
