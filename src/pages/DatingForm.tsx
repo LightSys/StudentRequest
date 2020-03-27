@@ -103,11 +103,7 @@ const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match })
       </IonHeader>
 
       <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">{ match.params.name }</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+
 
       {/*
         Below are the html for the entry boxes for all data.

@@ -126,12 +126,6 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
             </IonHeader>
 
             <IonContent>
-                <IonHeader collapse="condense">
-                    <IonToolbar>
-                        <IonTitle size="large">{match.params.name}</IonTitle>
-                        <IonTitle size="small"></IonTitle>
-                    </IonToolbar>
-                </IonHeader>
 
                 {/* Form Inputs and Labels - List of Men, Women, Email, and then Reason */}
                 <IonItem lines="none">

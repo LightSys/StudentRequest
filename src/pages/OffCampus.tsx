@@ -127,12 +127,6 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
       </IonHeader>
 
       <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">{match.params.name}</IonTitle>
-            <IonTitle size="small"></IonTitle>
-          </IonToolbar>
-        </IonHeader>
         
         {/* Form Inputs and Labels - Name, Gender Selection, Email */}
         <IonItem lines="none">
