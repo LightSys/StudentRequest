@@ -1,5 +1,6 @@
 import { IonButtons, IonContent, IonHeader, IonPage, IonTitle, IonToolbar,
-  IonInput, IonItem, IonLabel, IonRadioGroup, IonRadio, IonListHeader, IonTextarea, IonButton, IonBackButton, IonToast, IonDatetime } from '@ionic/react';
+  IonInput, IonItem, IonLabel, IonRadioGroup, IonRadio, IonListHeader, 
+  IonTextarea, IonButton, IonBackButton, IonToast, IonDatetime } from '@ionic/react';
 import React, {useState} from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Form.css';
@@ -138,6 +139,9 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
           <IonInput class="IonInput" value={nombre} type="text" onInput={handleNombre} />
         </IonItem>
 
+        {/*
+          A radio group tag used to select if they are mail or female
+        */}
         <IonRadioGroup value="hombre" onIonChange={e => handleGender(e.detail.value)}>
           <IonListHeader>
             <IonLabel class="padding" position="stacked">
