@@ -15,17 +15,19 @@ let hombre: string = "";
 let mujer: string = "";
 let email: string = "";
 let message: string = "";
+let typeOfForm: string ="Permiso Parejas Oficiales"
 
 /* 
   small class to set the data. All data is saved into an array.
   Todo: Implement backend for server connection. 
+  Give Each Array/Request item a unique ID
   Author: @wrightjjw 
           @OneTrueAsian
 */
 class DatingSubmission {
   data: Array<string>;
   constructor() {
-    this.data = [hombre, mujer, email]
+    this.data = [hombre, mujer, email, typeOfForm]
   }
 }
 
@@ -35,6 +37,7 @@ class DatingSubmission {
   are met, if not, the toast message is dynamically set 
   to meet requirements. Once met,
   all data is set to empty and a new DatingSubmission form is created.
+  -- submission.data is the array of submitted information --
   Author: @wrightjjw 
           @OneTrueAsian
 */
