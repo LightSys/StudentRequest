@@ -62,6 +62,6 @@ ion-label.label {
   adjust font size so text will fit the label
 */
 .small-font {
-  font-size: 16px !important;
+  font-size: small !important;
 }
 

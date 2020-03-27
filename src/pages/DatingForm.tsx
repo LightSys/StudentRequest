@@ -98,7 +98,7 @@ const DatingForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match })
           <IonButtons slot="start">
             <IonBackButton defaultHref="/home" />
           </IonButtons>
-          <IonTitle>Permiso de Parejas Oficiales</IonTitle>
+          <IonTitle>Parejas Oficiales</IonTitle>
         </IonToolbar>
       </IonHeader>
 

@@ -27,7 +27,7 @@ const Page: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
 
           <IonRow>
             <IonCol>
-              <IonButton expand="block" href="/offcampus"><IonLabel class="font-size">Dormir Fuera</IonLabel></IonButton>
+              <IonButton expand="block" href="/offcampus"><IonLabel class="font-size">Permiso Para Dormir Fuera</IonLabel></IonButton>
             </IonCol>
           </IonRow>
 

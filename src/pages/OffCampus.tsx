@@ -122,7 +122,7 @@ const OffCampus: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
           <IonButtons slot="start">
             <IonBackButton defaultHref="/home" />
           </IonButtons>
-          <IonTitle class="small-font" >Permiso Para Dormir Fuera del Dormitorio</IonTitle>
+          <IonTitle class="small-font" >Dormir Fuera del Dormitorio</IonTitle>
         </IonToolbar>
       </IonHeader>
 
