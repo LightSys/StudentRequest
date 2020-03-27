@@ -4,7 +4,7 @@ import {folderOutline} from 'ionicons/icons'
 import { IonHeader,IonItem, IonToolbar, IonTitle,IonButton, IonPage, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardContent, IonCardTitle, IonIcon} from '@ionic/react';
 import './Form.css'
 
-let list: Array<Array<string>> = [["Permiso de Pareja", "marcos@riogrande.edu", "/requests/0"], ["Permiso de dormir afuera", "carlos@riogrande.edu", "/requests/1"],
+let testList: Array<Array<string>> = [["Permiso de Pareja", "marcos@riogrande.edu", "/requests/0"], ["Permiso de dormir afuera", "carlos@riogrande.edu", "/requests/1"],
  ["Permiso Mixto", "urmom@riogrande.edu", "/requests/2"], ["Permiso Mixto", "tumadre@riogrande.edu", "/requests/3"]];
 
 const AdminHome: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) => {
@@ -15,7 +15,7 @@ const AdminHome: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) =>
             <IonHeader>
                 <IonToolbar>
                     <IonItem lines ="none">
-                        <IonButton>
+                        <IonButton href ='/Archive'>
                             <IonIcon icon ={folderOutline} item-left></IonIcon>
                         </IonButton>
                         <IonTitle>Archive</IonTitle>
@@ -26,7 +26,7 @@ const AdminHome: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) =>
                 <IonTitle class = "AdminHome">Incoming Requests</IonTitle>
             </IonItem>
             <IonGrid>
-            {list.map(thing => (
+            {testList.map(thing => (
                 <IonRow>
                     <IonCol>
                         <IonCard button href = {thing[2]}>

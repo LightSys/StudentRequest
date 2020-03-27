@@ -29,6 +29,7 @@ import GroupForm from './pages/GroupForm';
 import DatingForm from './pages/DatingForm';
 import Login from './pages/Login';
 import AdminHome from './pages/AdminHome';
+import Archive from './pages/Archive';
 const App: React.FC = () => {
 
   // eslint-disable-next-line
@@ -54,6 +55,10 @@ const App: React.FC = () => {
               setSelectedPage(props.match.params.name);
               return <Login {...props} />;
               }} exact={true} />
+            <Route path="/Archive" render={(props) => {
+            setSelectedPage(props.match.params.name);
+            return <Archive {...props} />;
+            }} exact={true} />
             <Route path="/DatingForm" render={(props) => {
               setSelectedPage(props.match.params.name);
               return <DatingForm {...props} />;

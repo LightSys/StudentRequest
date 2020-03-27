@@ -13,6 +13,7 @@ ion-content ion-toolbar {
   font-size: 28px;
 }
 
+
 .IonInput {
   --padding-top: 5px !important;
   padding-left: 10px !important;
@@ -20,6 +21,7 @@ ion-content ion-toolbar {
   --color: black;
   border-radius: 0px !important;
 }
+
 
 .IonButton{
   --padding-end: 0em !important;
