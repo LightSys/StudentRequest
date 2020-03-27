@@ -49,7 +49,7 @@ const Login: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) => {
             
             <IonHeader>
                     <IonToolbar>
-                        <IonTitle>Hola, Bienvenidos!</IonTitle>
+                        <IonTitle>Iniciar sesión</IonTitle>
                     </IonToolbar>
             </IonHeader>
             <IonContent>
