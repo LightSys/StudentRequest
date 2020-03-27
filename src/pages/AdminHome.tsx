@@ -42,7 +42,7 @@ const AdminHome: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) =>
                 {testList.map(thing => (
                     <IonRow>
                         <IonCol>
-                            <IonCard button href = {thing[2]}>
+                            <IonCard button href = "/Requests:id">
                                 <IonCardHeader>
                                     <IonCardTitle color = "danger">{thing[0]}</IonCardTitle>
                                 </IonCardHeader>

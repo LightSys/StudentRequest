@@ -18,6 +18,7 @@ let endyear = year + 1;
 /* 
   small class to set the data. All data is saved into an array.
   Todo: Implement backend for server connection. 
+        Give Each Array/Request item a unique ID
   Author: @njw32
           
 */
@@ -29,12 +30,12 @@ let returnTime: string = sampleTime;
 let location: string = "";
 let reason: string = "";
 let message: string = "";
-
+let typeOfForm: string = "Permiso Mixto"
 
 class GroupSubmission {
     data: Array<string>;
     constructor() {
-        this.data = [hombres, mujeres, email,leaveTime, returnTime, location, reason]
+        this.data = [hombres, mujeres, email,leaveTime, returnTime, location, reason, typeOfForm]
     }
 }
 
@@ -44,6 +45,7 @@ class GroupSubmission {
   are met, if not, the toast message is dynamically set 
   to meet requirements. Once met,
   all data is set to empty and a new DatingSubmission form is created.
+  -- submission.data is the array of submitted information --
   Author: @njw32
           @OneTrueAsian
 */
