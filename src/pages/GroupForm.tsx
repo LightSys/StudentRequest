@@ -3,12 +3,21 @@ import React, {useState} from 'react';
 import { RouteComponentProps } from 'react-router';
 import './Form.css';
 
-
+/*
+  Inital data. All set to an empty string. 
+  Message is set dynamically depending on the toast that is being called.
+*/
 let today = new Date();
 let year = today.getFullYear();
 let sampleTime = "Jan 1, " + year.toString() + " 12:00"; 
 let endyear = year + 1;
 
+/* 
+  small class to set the data. All data is saved into an array.
+  Todo: Implement backend for server connection. 
+  Author: @njw32
+          
+*/
 let hombres: string = "";
 let mujeres: string = "";
 let email: string = "";
@@ -18,6 +27,7 @@ let location: string = "";
 let reason: string = "";
 let message: string = "";
 
+
 class GroupSubmission {
     data: Array<string>;
     constructor() {
@@ -25,6 +35,15 @@ class GroupSubmission {
     }
 }
 
+/*
+  OnClick handler to create a new Outing form after.
+  The system will check to make sure all required fields
+  are met, if not, the toast message is dynamically set 
+  to meet requirements. Once met,
+  all data is set to empty and a new DatingSubmission form is created.
+  Author: @njw32
+          @OneTrueAsian
+*/
 function handleSubmit(){
     if(hombres==="" || mujeres==="" || email==="" ||
         location==="" || reason ==="" || 
@@ -43,6 +62,12 @@ function handleSubmit(){
 
 
 }
+
+/*
+  All functions below are used to set data.
+  The functions takes any event and data is set at target value
+  Author: @njw32
+*/
 function handleHombres(event:any){
     hombres = event.target.value;
 }
@@ -64,10 +89,27 @@ function handleLocation(event:any){
 function handleReason(event:any){
     reason = event.target.value;
 }
+
+
 //Permission Form for Mixed Groups (Permiso Mixto) 
 const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
+
+    // return a stateful value, and a function to update it.
     const [showToast, setShowToast] = useState(false);
+
+    // Permission form to go out as a group
     return (
+        /*
+      Translation: Permiso Para Dormir Fuera del Dormitorio -> Permision for sleeping outside the dormitory
+                    Hombre de Hombre -> Name of Guys
+                    Mujer de Nombre -> Name of Female
+                    Enviar -> Submit
+                    Hora de Salida -> Departure Time
+                    Hora de Regreso -> Return Time
+                    ¿Dónde? -> Where?
+                    Razon - >reason
+        */
+
         <IonPage>
             <IonHeader>
                 <IonToolbar>
@@ -108,6 +150,9 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
                     <IonInput class="IonInput" placeholder="email@riogrande.edu" value={email} onInput={handleEmail}></IonInput>
                 </IonItem>
 
+                {/*
+                Tags for date time entry
+                */}
                 <IonItem lines="none">
                     <IonLabel class="padding" position="stacked">Hora de Salida *</IonLabel>
                         <IonDatetime displayFormat="MMM DD, YYYY HH:mm" min = {year.toString()} max = {endyear.toString()} value = {sampleTime} onIonChange={e => handleLeave(e.detail.value)}></IonDatetime>
@@ -133,13 +178,18 @@ const GroupForm: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) 
                 </IonItem>
 
                 <IonItem lines="none"></IonItem>
-
-
+                
+                {/*
+                Submit button, takes in an onClick handler to process handleSubmit() and setShowToast()
+                */} 
                 <IonButton class="IonButton" expand="block" onClick={() => {handleSubmit(); setShowToast(true)}} type = "submit">
                     <IonLabel class="font-size">Enviar</IonLabel>
                 </IonButton>
                     
-
+                {/*
+                    Toast to message user that their form was submitted or if they forgot a field entry.
+                    Author: @wrightjjw 
+                */}
                 <IonToast
                 message={message}
                 isOpen={showToast}

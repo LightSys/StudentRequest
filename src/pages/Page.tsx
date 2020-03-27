@@ -6,6 +6,8 @@ import './Form.css';
 
 
 const Page: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
+  // This page directs users to all the forms they wish to use
+  // Author: @njw32
   return (
     <IonPage>
       <IonHeader>
@@ -44,8 +46,6 @@ const Page: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
             </IonCol>
           </IonRow>
         </IonGrid>
-          
-          {/* <IonItem lines="none" /> */}
           <IonItem lines="none" />
       </IonContent>
     </IonPage>
