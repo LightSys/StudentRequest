@@ -14,7 +14,7 @@ import './Form.css'
 */
 
 let testList: Array<Array<string>> = [["Permiso de Pareja", "marcos@riogrande.edu", "/requests/0", "Jan 4, 2020"], ["Permiso de dormir afuera", "carlos@riogrande.edu", "/requests/1",  "Mar 9, 2020"],
- ["Permiso Mixto", "urmom@riogrande.edu", "/requests/2",  "Jul 25, 2019"], ["Permiso Mixto", "tumadre@riogrande.edu", "/requests/3", "Mar 9, 2020"]];
+ ["Permiso Mixto", "Miranda@riogrande.edu", "/requests/2",  "Jul 25, 2019"], ["Permiso Mixto", "Jeff@riogrande.edu", "/requests/3", "Mar 9, 2020"]];
 
 const Archive: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) => {
     return (

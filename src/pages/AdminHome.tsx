@@ -12,7 +12,7 @@ import './Form.css'
 */
 
 let testList: Array<Array<string>> = [["Permiso de Pareja", "marcos@riogrande.edu", "/requests/0"], ["Permiso de dormir afuera", "carlos@riogrande.edu", "/requests/1"],
- ["Permiso Mixto", "urmom@riogrande.edu", "/requests/2"], ["Permiso Mixto", "tumadre@riogrande.edu", "/requests/3"]];
+ ["Permiso Mixto", "Miranda@riogrande.edu", "/requests/2"], ["Permiso Mixto", "Jeff@riogrande.edu", "/requests/3"]];
 
 const AdminHome: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) => {
     return (
