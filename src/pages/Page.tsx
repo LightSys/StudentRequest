@@ -6,7 +6,7 @@ import './Form.css';
 
 
 const Page: React.FC<RouteComponentProps<{ name: string; }>> = ({ match }) => {
-  // This page directs users to all the forms they wish to use
+  // This page directs users to all the forms they wish to use --STUDENT HOME PAGE--
   // Author: @njw32
   return (
     <IonPage>
