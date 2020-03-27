@@ -28,6 +28,7 @@ import OffCampus from './pages/OffCampus';
 import GroupForm from './pages/GroupForm';
 import DatingForm from './pages/DatingForm';
 import Login from './pages/Login';
+import AdminHome from './pages/AdminHome';
 const App: React.FC = () => {
 
   // eslint-disable-next-line
@@ -45,6 +46,10 @@ const App: React.FC = () => {
             }} exact={true} />
             <Route path="/" render={() => <Redirect to="/Login" />} exact={true} />
             <Route path="/home" component={Page} />
+            <Route path="/AdminHome" render={(props) => {
+              setSelectedPage(props.match.params.name);
+              return <AdminHome {...props} />;
+              }} exact={true} />
             <Route path="/Login" render={(props) => {
               setSelectedPage(props.match.params.name);
               return <Login {...props} />;
