@@ -11,7 +11,11 @@ import './Form.css'
 let username = ""
 let password = ""
 
-
+/*
+  All functions below are used to set data.
+  The functions takes any event and data is set at target value
+  Author: @wrightjjw 
+*/
 function handleUsername(event: any) {
     username = event.target.value;
 }
@@ -21,7 +25,7 @@ function handlePassword(event: any) {
 }
 
 /*
-  Todo: Replace code to work with server side. Should have authentication services
+  Todo: * Replace code to work with server side. Should have authentication services
   Author: @wrightjjw
 */
 function handleSubmit() {
@@ -41,7 +45,6 @@ const Login: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) => {
                     Contraseña -> Password
                     Hola, Bienvenidos! -> Hello, Welcome
         */
-    
         <IonPage>
             
             <IonHeader>
@@ -63,14 +66,16 @@ const Login: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) => {
                         </IonLabel>
                         <IonInput class="IonInput" placeholder="Password" type="password" onInput={handlePassword}></IonInput>
                 </IonItem>
+
+                {/*Login in buttons for user to sign in and select what type of user they are.
+                    todo: * Remove the admin button direct, the admin page will need to be assigned
+                    to roles. Maybe a specfici email that can only access admin page?*/}
                 <IonItem lines ="none"></IonItem>
                 <IonButton href="/home" expand="block" onClick={() => {handleSubmit()}}><IonLabel>Sign In</IonLabel></IonButton>
                 <IonButton href="/AdminHome" expand="block" onClick={() => {handleSubmit()}}><IonLabel>Admin</IonLabel></IonButton>
 
 
             </IonContent>
-        
-
         </IonPage>
     );
 }

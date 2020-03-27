@@ -4,6 +4,13 @@ import {folderOutline} from 'ionicons/icons'
 import { IonHeader,IonItem, IonContent, IonToolbar, IonTitle,IonButton, IonPage, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardContent, IonCardTitle, IonIcon} from '@ionic/react';
 import './Form.css'
 
+
+/*
+    todo:   * When clicked on, the buttons will take them to the item based on the id.
+            * Remove the current items in testList and populate it with data from client side
+            * Populate the data from server.  
+*/
+
 let testList: Array<Array<string>> = [["Permiso de Pareja", "marcos@riogrande.edu", "/requests/0"], ["Permiso de dormir afuera", "carlos@riogrande.edu", "/requests/1"],
  ["Permiso Mixto", "Miranda@riogrande.edu", "/requests/2"], ["Permiso Mixto", "Jeff@riogrande.edu", "/requests/3"]];
 
@@ -26,6 +33,9 @@ const AdminHome: React.FC<RouteComponentProps<{name: string;}>> = ({ match }) =>
                 <IonTitle class = "AdminHome">Incoming Requests</IonTitle>
             </IonItem>
 
+            {/* 
+                Mapped items for current requests data.
+            */}
             <IonContent>
                 <IonGrid>
                 {testList.map(thing => (
